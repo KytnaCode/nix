@@ -42,7 +42,7 @@
           set -g @tmux2k-session-colors "purple white"
           set -g @tmux2k-cwd-colors "pink text"
           set -g @tmux2k-git-colors "gray text"
-          set -g @tmux2k-bandwith-colors "gray text"
+          set -g @tmux2k-bandwidth-colors "gray text"
           set -g @tmux2k-cpu-colors "pink text"
           set -g @tmux2k-ram-colors "pink text"
           set -g @tmux2k-time-colors "purple white"
