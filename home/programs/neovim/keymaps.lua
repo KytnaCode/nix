@@ -76,4 +76,4 @@ map(
 )
 
 -- Git
-map("n", [[<leader>gc]], "<CMD>G commit -av<CR>", opts({ silent = false, desc = "commit changes" }))
+map("n", [[<leader>gc]], "<CMD>G commit -v<CR>", opts({ silent = false, desc = "commit changes" }))
