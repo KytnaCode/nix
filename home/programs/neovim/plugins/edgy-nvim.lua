@@ -19,5 +19,10 @@ require("edgy").setup({
       ft = "gitcommit",
       size = { width = 0.4 },
     },
+    -- Git log and other git stuff
+    {
+      ft = "git",
+      size = { width = 0.5 },
+    },
   },
 })
