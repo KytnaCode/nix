@@ -18,15 +18,35 @@ autocmd("BufWritePost", {
 })
 
 -- Use relativenumber on normal and visual mode but no on insert mode.
+local function filter()
+  if vim.bo.buftype ~= "" then
+    return false
+  end
+
+  return true
+end
+
 augroup("NumberColumn", { clear = true })
 autocmd("ModeChanged", {
   group = "NumberColumn",
   pattern = { "*:n", "*:v" },
-  command = "set relativenumber",
+  callback = function()
+    if not filter() then
+      return
+    end
+
+    vim.wo.relativenumber = true
+  end,
 })
 
 autocmd("ModeChanged", {
   group = "NumberColumn",
   pattern = "*:i",
-  command = "set norelativenumber",
+  callback = function()
+    if not filter() then
+      return
+    end
+
+    vim.wo.relativenumber = false
+  end,
 })

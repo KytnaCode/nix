@@ -13,6 +13,7 @@ vim.o.mouse = "nv"
 vim.o.mousehide = true
 vim.o.number = true
 vim.o.numberwidth = 1
+vim.o.relativenumber = true
 vim.o.scrolloff = 3
 vim.o.shell = "zsh"
 vim.o.shiftwidth = 2
