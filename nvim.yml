@@ -5,3 +5,9 @@ globals:
     any: true
   Snacks:
     any: true
+  config:
+    keymaps:
+      gitsigns:
+        function: true
+        args:
+          - type: number

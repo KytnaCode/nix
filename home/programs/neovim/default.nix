@@ -60,6 +60,7 @@ in {
 
     extraLuaConfig = with builtins;
       concatStringsSep "\n" [
+        "local config = {}"
         (readFile ./lsp.lua)
         (readFile ./keymaps.lua)
         (readFile ./autocmds.lua)
@@ -104,6 +105,7 @@ in {
       (mkPlugin lualine-nvim "lualine-nvim.lua")
       (mkPluginEmpty dashboard-nvim "dashboard")
       (mkPlugin bufferline-nvim "bufferline-nvim.lua")
+      (mkPlugin gitsigns-nvim "gitsigns-nvim.lua")
       pkgs.vimExtraPlugins.deadcolumn-nvim
       nui-nvim
       nvim-web-devicons

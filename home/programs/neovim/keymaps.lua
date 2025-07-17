@@ -2,6 +2,8 @@ local map = vim.keymap.set
 
 local lint = require("lint")
 
+config.keymaps = {}
+
 -- Ensure snacks is loaded.
 require("snacks")
 
@@ -77,3 +79,70 @@ map(
 
 -- Git
 map("n", [[<leader>gc]], "<CMD>G commit -v<CR>", opts({ silent = false, desc = "commit changes" }))
+
+---@param bufnr number
+function config.keymaps.gitsigns(bufnr)
+  local gitsigns = require("gitsigns")
+
+  local function m(mode, l, r, o)
+    o = o or {}
+    o.buffer = bufnr
+    map(mode, l, r, o)
+  end
+
+  -- Navigation
+  m("n", "]c", function()
+    if vim.wo.diff then
+      vim.cmd.normal({ "]c", bang = true })
+    else
+      gitsigns.nav_hunk("next")
+    end
+  end)
+
+  m("n", "[c", function()
+    if vim.wo.diff then
+      vim.cmd.normal({ "[c", bang = true })
+    else
+      gitsigns.nav_hunk("prev")
+    end
+  end)
+
+  -- Actions
+  m("n", "<leader>hs", gitsigns.stage_hunk)
+  m("n", "<leader>hr", gitsigns.reset_hunk)
+
+  m("v", "<leader>hs", function()
+    gitsigns.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
+  end)
+
+  m("v", "<leader>hr", function()
+    gitsigns.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
+  end)
+
+  m("n", "<leader>hS", gitsigns.stage_buffer)
+  m("n", "<leader>hR", gitsigns.reset_buffer)
+  m("n", "<leader>hp", gitsigns.preview_hunk)
+  m("n", "<leader>hi", gitsigns.preview_hunk_inline)
+
+  m("n", "<leader>hb", function()
+    gitsigns.blame_line({ full = true })
+  end)
+
+  m("n", "<leader>hd", gitsigns.diffthis)
+
+  m("n", "<leader>hD", function()
+    gitsigns.diffthis("~")
+  end)
+
+  m("n", "<leader>hQ", function()
+    gitsigns.setqflist("all")
+  end)
+  m("n", "<leader>hq", gitsigns.setqflist)
+
+  -- Toggles
+  m("n", "<leader>tb", gitsigns.toggle_current_line_blame)
+  m("n", "<leader>tw", gitsigns.toggle_word_diff)
+
+  -- Text object
+  m({ "o", "x" }, "ih", gitsigns.select_hunk)
+end
