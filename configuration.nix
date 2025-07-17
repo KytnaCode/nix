@@ -41,6 +41,12 @@
     };
   };
 
+  hardware = {
+    graphics.enable = true;
+
+    nvidia.open = false;
+  };
+
   environment.pathsToLink = ["/share/zsh"];
 
   # Configure network proxy if necessary
@@ -73,6 +79,8 @@
       enable = true;
       pulse.enable = true;
     };
+
+    xserver.videoDrivers = ["nvidia"];
 
     desktopManager.plasma6.enable = true;
 
