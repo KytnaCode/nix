@@ -55,6 +55,13 @@ map("n", [[<A-c>]], Snacks.bufdelete.delete, opts({ desc = "close buffer" }))
 -- File Explorer
 map("n", [[<leader>tt]], "<CMD>Neotree<CR>", opts({ desc = "open file explorer" }))
 
+-- LSP
+
+map("n", "bD", "<CMD>Glance definitions<CR>", opts({ desc = "show definiton" }))
+map("n", "bR", "<CMD>Glance references<CR>", opts({ desc = "show references" }))
+map("n", "bY", "<CMD>Glance type_definitions<CR>", opts({ desc = "show type definitions" }))
+map("n", "bM", "<CMD>Glance implementations<CR>", opts({ desc = "show implementations" }))
+
 -- Fuzzy Find
 local builtins = require("telescope.builtin")
 

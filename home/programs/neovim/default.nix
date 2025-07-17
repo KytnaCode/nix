@@ -72,6 +72,7 @@ in {
       nvim-lspconfig
       nvim-treesitter.withAllGrammars
       go-nvim
+      glance-nvim
       pkgs.vimExtraPlugins.guihua-lua
       (mkPlugin lsp_signature-nvim "lsp_signature-nvim.lua")
       (mkPlugin nvim-lightbulb "nvim-lightbulb.lua")
