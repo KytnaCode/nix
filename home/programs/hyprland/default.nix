@@ -13,9 +13,8 @@
       "$term" = "kitty";
 
       monitor = [
-        "HDMI-A-1, disable"
-        "DVI-D-2, 1920x1080@60, 0x0, 1"
-        "HDMI-A-3, 1920x1080@60, 0x-1080, 1"
+        "HDMI-A-1, 1920x1080@60, 0x-1080, 1"
+        "DVI-D-1, 1920x1080@60, 0x0, 1"
       ];
 
       general = {
