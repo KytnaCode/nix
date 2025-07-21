@@ -112,15 +112,7 @@ in {
       nvim-web-devicons
 
       # Utils
-      {
-        plugin = neo-tree-nvim;
-        type = "lua";
-        config = ''
-          require("neo-tree").setup({
-                   source_selector = { winbar = true },
-          })
-        '';
-      }
+      (mkPlugin neo-tree-nvim "neo-tree-nvim.lua")
       (mkPlugin toggleterm-nvim "toggleterm-nvim.lua")
       {
         plugin = flatten-nvim;

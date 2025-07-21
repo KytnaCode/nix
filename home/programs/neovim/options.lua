@@ -3,6 +3,7 @@ vim.g.colorscheme = "catppuccin-latte"
 vim.opt.laststatus = 3
 vim.opt.splitkeep = "screen"
 
+vim.o.autochdir = true
 vim.o.autoindent = true
 vim.o.autoread = true
 vim.o.clipboard = "unnamedplus"
