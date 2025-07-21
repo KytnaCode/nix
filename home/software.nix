@@ -15,6 +15,9 @@
     # Creativity
     manuskript
 
+    # Productivity
+    firefox
+
     # Hyprland related
     hyprpicker
     hyprshot
