@@ -1,5 +1,9 @@
 vim.g.coq_settings = {
   auto_start = "shut-up",
+  ["clients.lsp"] = {
+    always_on_top = {},
+    resolve_timeout = 0.1,
+  },
 }
 
 local enable_nvim_lua = os.getenv("ENABLE_NVIM_API")
