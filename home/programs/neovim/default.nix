@@ -32,7 +32,7 @@ in {
         vscode-json-languageserver
         yaml-language-server
         typescript-language-server
-        kdePackages.qtdeclarative
+        libsForQt5.qt5.qtdeclarative
         gopls
         clang-tools
 
