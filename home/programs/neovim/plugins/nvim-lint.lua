@@ -9,6 +9,7 @@ lint.linters.qmllint = {
   },
 }
 
+vim.env.ESLINT_D_PPID = vim.fn.getpid()
 lint.linters_by_ft = {
   lua = { "selene" },
   nix = { "statix" },
