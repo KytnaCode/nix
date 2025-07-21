@@ -24,5 +24,8 @@
     montserrat
     nerd-fonts.anonymice
     nerd-fonts.symbols-only
+
+    # System
+    pwvucontrol
   ];
 }
