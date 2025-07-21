@@ -2,7 +2,7 @@ vim.g.coq_settings = {
   auto_start = "shut-up",
   ["clients.lsp"] = {
     always_on_top = {},
-    resolve_timeout = 0.1,
+    resolve_timeout = 0.3,
   },
 }
 
