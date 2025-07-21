@@ -11,6 +11,7 @@
     settings = {
       "$mod" = "SUPER";
       "$term" = "kitty";
+      "$browser" = "firefox";
 
       monitor = [
         "HDMI-A-1, 1920x1080@60, 0x-1080, 1"
@@ -71,6 +72,7 @@
 
       bind = [
         "$mod, return, exec, $term"
+        "$mod, b, exec, $browser"
 
         "$mod SHIFT, q, killactive"
         "$mod ALT SHIFT, q, forcekillactive"
