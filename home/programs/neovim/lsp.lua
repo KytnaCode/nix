@@ -16,6 +16,10 @@ vim.lsp.enable("ts_ls")
 
 vim.lsp.enable("qmlls")
 
+vim.lsp.config("qmlls", {
+  cmd = { "qmlls", "-E" },
+})
+
 vim.lsp.enable("gopls")
 
 vim.lsp.enable("clangd")
