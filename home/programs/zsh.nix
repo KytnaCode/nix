@@ -8,6 +8,8 @@
       "switch" = "sudo nixos-rebuild switch";
       "snvim" = "sudo -E nvim";
       "lmake" = "make -f Makefile.local";
+      "todayf" = "touch \"$(date --iso-8601)\"";
+      "todayd" = "mkdir \"$(date --iso-8601)\"";
     };
     syntaxHighlighting.enable = true;
 
