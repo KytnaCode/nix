@@ -25,6 +25,10 @@
       # Mouse
       mouse_hide_wait = -1; # Hide on type.
       show_hyprlink_targets = true;
+
+      # Appearance
+      background_opacity = 0.8;
+      background_blur = 1;
     };
   };
 }
