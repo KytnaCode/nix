@@ -26,6 +26,9 @@ require("formatter").setup({
     typescriptreact = {
       require("formatter.filetypes.typescriptreact").prettierd,
     },
+    haskell = {
+      require("formatter.filetypes.haskell").ormolu,
+    },
     qml = {
       function()
         return {

@@ -19,4 +19,5 @@ lint.linters_by_ft = {
   typescriptreact = { "eslint_d" },
   qml = { "qmllint" },
   go = { "golangcilint" },
+  haskell = { "hlint" },
 }

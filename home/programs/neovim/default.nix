@@ -35,6 +35,7 @@ in {
         libsForQt5.qt5.qtdeclarative
         gopls
         clang-tools
+        haskell-language-server
 
         # Formatters & Linters
 
@@ -52,6 +53,10 @@ in {
 
         # Golang
         golangci-lint
+
+        # Haskell
+        hlint
+        ormolu
 
         # Misc
         bc

@@ -22,4 +22,6 @@ vim.lsp.config("qmlls", {
 
 vim.lsp.enable("gopls")
 
+vim.lsp.enable("hls")
+
 vim.lsp.enable("clangd")
