@@ -15,8 +15,8 @@
       enable = true;
 
       plugins = [
-        "aliases"
         "alias-finder"
+        "aliases"
         "aws"
         "azure"
         "cabal"
