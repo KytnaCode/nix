@@ -11,6 +11,7 @@
       "todayf" = "touch \"$(date --iso-8601)\"";
       "todayd" = "mkdir \"$(date --iso-8601)\"";
       "cdtoday" = "cd \"$(date --iso-8601)\"";
+      "useflake" = "echo \"use_flake\" >> .envrc";
     };
     syntaxHighlighting.enable = true;
 
