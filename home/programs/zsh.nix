@@ -10,6 +10,7 @@
       "lmake" = "make -f Makefile.local";
       "todayf" = "touch \"$(date --iso-8601)\"";
       "todayd" = "mkdir \"$(date --iso-8601)\"";
+      "cdtoday" = "cd \"$(date --iso-8601)\"";
     };
     syntaxHighlighting.enable = true;
 
