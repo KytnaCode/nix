@@ -30,5 +30,6 @@
 
     # System
     pwvucontrol
+    wl-clipboard
   ];
 }
