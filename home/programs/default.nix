@@ -8,6 +8,7 @@
     ./kitty.nix
     ./neovim
     ./tmux.nix
+    ./wofi.nix
     ./zoxide.nix
     ./zsh.nix
   ];

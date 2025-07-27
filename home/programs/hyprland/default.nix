@@ -12,6 +12,7 @@
       "$mod" = "SUPER";
       "$term" = "kitty";
       "$browser" = "firefox";
+      "$launcher" = "wofi";
 
       monitor = [
         "HDMI-A-1, 1920x1080@60, 0x-1080, 1"
@@ -73,6 +74,7 @@
       bind = [
         "$mod, return, exec, $term"
         "$mod, b, exec, $browser"
+        "$mod, d, exec, $launcher"
 
         "$mod SHIFT, q, killactive"
         "$mod ALT SHIFT, q, forcekillactive"
