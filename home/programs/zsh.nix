@@ -24,7 +24,6 @@
         "aws"
         "azure"
         "cabal"
-        "cabal"
         "colored-man-pages"
         "command-not-found"
         "common-aliases"
