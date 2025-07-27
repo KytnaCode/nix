@@ -24,5 +24,12 @@ require("edgy").setup({
       ft = "git",
       size = { width = 0.5 },
     },
+    {
+      ft = "help",
+      size = { width = 0.5 },
+      filter = function(bufnr, _)
+        return vim.bo[bufnr].buftype == "help" or vim.bo[bufnr].filetype == "help"
+      end,
+    },
   },
 })
