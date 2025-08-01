@@ -36,6 +36,7 @@ in {
         gopls
         clang-tools
         haskell-language-server
+        rust-analyzer
 
         # Formatters & Linters
 
@@ -57,6 +58,10 @@ in {
         # Haskell
         hlint
         ormolu
+
+        # Rust
+        rustfmt
+        clippy
 
         # Misc
         bc

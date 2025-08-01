@@ -25,3 +25,5 @@ vim.lsp.enable("gopls")
 vim.lsp.enable("hls")
 
 vim.lsp.enable("clangd")
+
+vim.lsp.enable("rust_analyzer")

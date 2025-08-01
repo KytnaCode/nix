@@ -29,6 +29,9 @@ require("formatter").setup({
     haskell = {
       require("formatter.filetypes.haskell").ormolu,
     },
+    rust = {
+      require("formatter.filetypes.rust").rustfmt,
+    },
     qml = {
       function()
         return {
