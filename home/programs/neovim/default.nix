@@ -141,6 +141,7 @@ in {
       telescope-nvim
       zen-mode-nvim
       twilight-nvim
+      mkdir-nvim
 
       # Misc
       plenary-nvim
