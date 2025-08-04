@@ -32,6 +32,9 @@ require("formatter").setup({
     rust = {
       require("formatter.filetypes.rust").rustfmt,
     },
+    sh = {
+      require("formatter.filetypes.sh").shfmt,
+    },
     qml = {
       function()
         return {

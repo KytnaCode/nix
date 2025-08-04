@@ -34,6 +34,7 @@ in {
         typescript-language-server
         libsForQt5.qt5.qtdeclarative
         gopls
+        bash-language-server
         clang-tools
         haskell-language-server
         rust-analyzer
@@ -62,6 +63,10 @@ in {
         # Rust
         rustfmt
         clippy
+
+        # Shell
+        shfmt
+        shellcheck
 
         # Misc
         bc

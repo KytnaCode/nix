@@ -20,4 +20,5 @@ lint.linters_by_ft = {
   qml = { "qmllint" },
   go = { "golangcilint" },
   haskell = { "hlint" },
+  sh = { "shellcheck" },
 }
