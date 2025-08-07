@@ -50,3 +50,34 @@ autocmd("ModeChanged", {
     vim.wo.relativenumber = false
   end,
 })
+
+augroup("SessionManagment", { clear = true })
+autocmd("VimLeavePre", {
+  group = "SessionManagment",
+  nested = true,
+  callback = function()
+    local shouldClose = function(buf)
+      if vim.bo[buf].buftype ~= "" then
+        return true
+      end
+
+      return false
+    end
+
+    for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+      if shouldClose(buf) then
+        vim.api.nvim_buf_delete(buf, { force = true })
+      end
+    end
+
+    require("mini.sessions").write("Session.vim")
+  end,
+})
+
+autocmd("VimEnter", {
+  group = "SessionManagment",
+  nested = true,
+  callback = function()
+    require("mini.sessions").read()
+  end,
+})

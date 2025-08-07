@@ -60,11 +60,18 @@
           set -g @tmux2k-window-list-format "#[fg=#4c4f69]#I:#W"
         '';
       }
+      {
+        plugin = resurrect;
+        extraConfig = ''
+          set -g @resurrect-strategy-nvim 'session'
+          set -g @resurrect-capture-pane-contents 'on'
+          set -g @resurrect-processes '"~nvim->nvim" quickshell journalctl'
+        '';
+      }
       pain-control # Better pane keymaps.
       better-mouse-mode # Again, I rarely use mouse, but it's handy sometimes.
       tmux-thumbs
       tmux-which-key
-      resurrect
       tmux-fzf # Manage tmux with fzf.
       online-status
       net-speed

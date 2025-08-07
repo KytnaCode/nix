@@ -5,6 +5,7 @@
     ignores = [
       ".nvim.lua"
       "Makefile.local"
+      "Session.vim"
     ];
 
     extraConfig = {

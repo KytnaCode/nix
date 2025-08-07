@@ -16,6 +16,10 @@ require("mini.pairs").setup()
 -- Split or join function arguments.
 require("mini.splitjoin").setup()
 
+-- Sessions
+
+require("mini.sessions").setup()
+
 -- Sorround text actions.
 require("mini.surround").setup()
 

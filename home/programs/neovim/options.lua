@@ -15,6 +15,7 @@ vim.o.number = true
 vim.o.numberwidth = 1
 vim.o.relativenumber = true
 vim.o.scrolloff = 3
+vim.o.sessionoptions = "buffers,curdir,help,options,resize"
 vim.o.shell = "zsh"
 vim.o.shiftwidth = 2
 vim.o.signcolumn = "yes:1"
