@@ -13,6 +13,8 @@
         defaultBranch = "main";
       };
 
+      credential.helper = ["cache --timeout 18000"];
+
       push.autoSetupRemote = true;
     };
 
