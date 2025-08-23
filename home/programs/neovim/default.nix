@@ -2,8 +2,10 @@
   pkgs,
   lib,
   nil,
+  inputs,
   ...
 }: let
+  rtp = ./rtp;
   pluginConfig = ./plugins;
   readConfig = name: builtins.readFile (lib.path.append pluginConfig name);
   mkPluginEmpty = plugin: name: {
@@ -80,6 +82,7 @@ in {
         (readFile ./keymaps.lua)
         (readFile ./autocmds.lua)
         (readFile ./options.lua)
+        "vim.opt.rtp:prepend('${rtp}/after')"
       ];
 
     plugins = with pkgs.vimPlugins; [
@@ -89,6 +92,7 @@ in {
       go-nvim
       glance-nvim
       pkgs.vimExtraPlugins.guihua-lua
+      inputs.haskell-tools-nvim.packages.${pkgs.system}.default
       (mkPlugin lsp_signature-nvim "lsp_signature-nvim.lua")
       (mkPlugin nvim-lightbulb "nvim-lightbulb.lua")
       (mkPlugin snacks-nvim "snacks-nvim.lua")

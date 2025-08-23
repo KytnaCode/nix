@@ -22,7 +22,7 @@ vim.lsp.config("qmlls", {
 
 vim.lsp.enable("gopls")
 
-vim.lsp.enable("hls")
+-- vim.lsp.enable("hls") -- haskell-tools.nvim automatically configures hls.
 
 vim.lsp.enable("clangd")
 
