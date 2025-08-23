@@ -18,6 +18,7 @@
     # Productivity
     firefox
     obsidian
+    anki
 
     # Hyprland related
     hyprpicker
