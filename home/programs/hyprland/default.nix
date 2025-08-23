@@ -51,7 +51,7 @@
       };
 
       input = {
-        kb_layout = "us,latam";
+        kb_layout = "us";
         accel_profile = "flat";
       };
 
@@ -71,6 +71,8 @@
         hide_on_key_press = true;
       };
 
+      exec-once = "fcitx5";
+
       bind = [
         "$mod, return, exec, $term"
         "$mod, b, exec, $browser"
@@ -82,11 +84,11 @@
         "$mod, f, fullscreen, 0"
         "$mod, z, fullscreen, 1"
         "$mod, p, pin"
-        "$mod SHIFT, esc, exec, uwsm stop"
+        "$mod SHIFT, Escape, exec, uwsm stop"
         "$mod, o, exec, hyprpicker -arq -f hex"
         "$mod SHIFT, s, exec, hyprshot --mode region --freeze --silent --clipboard-only"
         "$mod SHIFT ALT, s, exec, hyprshot --mode output --freeze --silent --clipboard-only"
-        "$mod, space, exec, hyprctl switchxkblayout current next"
+        "$mod, space, exec, fcitx5-remote -t"
 
         "$mod, KP_Up, exec, hyprsunset temperature +100"
         "$mod, KP_Down, exec, hyprsunsent temperature -100"
