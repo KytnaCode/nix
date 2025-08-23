@@ -17,6 +17,7 @@
 
     # Productivity
     firefox
+    obsidian
 
     # Hyprland related
     hyprpicker
