@@ -88,7 +88,6 @@
         "$mod, o, exec, hyprpicker -arq -f hex"
         "$mod SHIFT, s, exec, hyprshot --mode region --freeze --silent --clipboard-only"
         "$mod SHIFT ALT, s, exec, hyprshot --mode output --freeze --silent --clipboard-only"
-        "$mod, space, exec, fcitx5-remote -t"
 
         "$mod, KP_Up, exec, hyprsunset temperature +100"
         "$mod, KP_Down, exec, hyprsunsent temperature -100"
