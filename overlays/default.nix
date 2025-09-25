@@ -1,0 +1,3 @@
+[
+  (import ./manuskript.nix)
+]

@@ -19,9 +19,11 @@
 
   catppuccin.flavor = "latte";
 
-  nixpkgs.overlays = [
-    inputs.nixneovimplugins.overlays.default
-  ];
+  nixpkgs.overlays =
+    [
+      inputs.nixneovimplugins.overlays.default
+    ]
+    ++ import ./overlays;
 
   nixpkgs.config.allowUnfree = true;
 
