@@ -12,6 +12,7 @@
 
     # Config modules:
     ./modules/input.nix
+    ./modules/networking.nix
   ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -27,11 +28,6 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  networking.hostName = "alex-linux"; # Define your hostname.
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "America/Mazatlan";
@@ -72,9 +68,6 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
-  # Enable sound.
-  # services.pulseaudio.enable = true;
-  # OR
   services = {
     pipewire = {
       enable = true;
