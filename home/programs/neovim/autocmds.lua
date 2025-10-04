@@ -26,6 +26,14 @@ local function filter()
   return true
 end
 
+local function file_exists(f)
+  if vim.uv.fs_stat(f) == nil then
+    return false
+  end
+
+  return true
+end
+
 augroup("NumberColumn", { clear = true })
 autocmd("ModeChanged", {
   group = "NumberColumn",
@@ -58,6 +66,10 @@ autocmd("VimLeavePre", {
   callback = function()
     local shouldClose = function(buf)
       if vim.bo[buf].buftype ~= "" then
+        return true
+      end
+
+      if not file_exists(vim.api.nvim_buf_get_name(buf)) then
         return true
       end
 
