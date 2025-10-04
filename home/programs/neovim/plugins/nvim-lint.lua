@@ -19,6 +19,7 @@ lint.linters_by_ft = {
   typescriptreact = { "eslint_d" },
   qml = { "qmllint" },
   go = { "golangcilint" },
+  python = { "pylint" },
   haskell = { "hlint" },
   sh = { "shellcheck" },
 }

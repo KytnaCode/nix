@@ -26,6 +26,9 @@ require("formatter").setup({
     typescriptreact = {
       require("formatter.filetypes.typescriptreact").prettierd,
     },
+    python = {
+      require("formatter.filetypes.python").black,
+    },
     haskell = {
       require("formatter.filetypes.haskell").ormolu,
     },
