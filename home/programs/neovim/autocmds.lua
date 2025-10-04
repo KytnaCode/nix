@@ -74,10 +74,10 @@ autocmd("VimLeavePre", {
   end,
 })
 
-autocmd("VimEnter", {
-  group = "SessionManagment",
-  nested = true,
-  callback = function()
-    require("mini.sessions").read()
-  end,
-})
+-- autocmd("VimEnter", {
+--   group = "SessionManagment",
+--   nested = true,
+--   callback = function()
+--     require("mini.sessions").read()
+--   end,
+-- })
