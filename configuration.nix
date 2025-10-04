@@ -13,6 +13,7 @@
     # Config modules:
     ./modules/input.nix
     ./modules/networking.nix
+    ./modules/software.nix
   ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -59,22 +60,6 @@
 
     # NVidia Propetiary drivers.
     xserver.videoDrivers = ["nvidia"];
-
-    desktopManager.plasma6.enable = true;
-
-    displayManager.sddm = {
-      enable = true;
-      wayland.enable = true;
-    };
-  };
-
-  programs = {
-    zsh.enable = true;
-
-    hyprland = {
-      enable = true;
-      withUWSM = true;
-    };
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
