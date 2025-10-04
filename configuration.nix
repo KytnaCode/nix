@@ -41,6 +41,8 @@
 
     # Use propetiary drivers.
     nvidia.open = false;
+
+    bluetooth.enable = true;
   };
 
   environment.pathsToLink = ["/share/zsh"];
