@@ -20,6 +20,9 @@
     obsidian
     anki
 
+    # Utility
+    gnome-clocks
+
     # Hyprland related
     hyprpicker
     hyprshot
