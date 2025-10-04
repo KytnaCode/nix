@@ -12,6 +12,9 @@
   home.packages = with pkgs; [
     inputs.quickshell.packages.${system}.default
 
+    # Social
+    discord
+
     # Creativity
     manuskript
 
