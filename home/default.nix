@@ -1,4 +1,8 @@
-_: {
+{
+  config,
+  lib,
+  ...
+}: {
   imports = [
     ./catppuccin.nix
     ./software.nix
@@ -10,6 +14,16 @@ _: {
   home = {
     username = "alex";
     homeDirectory = "/home/alex";
+
+    activation = {
+      install-flatpak = lib.hm.dag.entryAfter ["installPackages"] ''
+        PATH="${config.home.path}/bin:$PATH" FLATPAK_CONFIG_FILE="${./flatpak.json}" run ${./tasks/install-flatpak.sh}
+      '';
+    };
+
+    file.".profile".text = ''
+      export XDG_DATA_DIRS=$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share
+    '';
   };
 
   qt = {

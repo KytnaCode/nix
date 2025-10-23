@@ -20,5 +20,7 @@
       enable = true;
       wayland.enable = true;
     };
+
+    flatpak.enable = true;
   };
 }

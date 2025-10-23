@@ -25,6 +25,7 @@
 
     # Utility
     gnome-clocks
+    flatpak
 
     # Hyprland related
     hyprpicker
