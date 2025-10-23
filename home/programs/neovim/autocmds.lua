@@ -34,6 +34,22 @@ local function file_exists(f)
   return true
 end
 
+local function is_buf_empty(bufnr)
+  local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
+
+  if #lines == 0 then
+    return true
+  end
+
+  for _, line in ipairs(lines) do
+    if #line > 0 then
+      return false
+    end
+  end
+
+  return true
+end
+
 augroup("NumberColumn", { clear = true })
 autocmd("ModeChanged", {
   group = "NumberColumn",
@@ -76,13 +92,30 @@ autocmd("VimLeavePre", {
       return false
     end
 
+    local is_session_empty = true
+
     for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+      local is_empty = true
+
+      if vim.api.nvim_buf_is_valid(buf) and vim.api.nvim_buf_is_loaded(buf) then
+        is_empty = false
+      end
+
+      if not is_buf_empty(buf) then
+        is_empty = false
+      end
+
       if shouldClose(buf) then
         vim.api.nvim_buf_delete(buf, { force = true })
+        is_empty = true
       end
+
+      is_session_empty = is_empty and is_session_empty
     end
 
-    require("mini.sessions").write("Session.vim")
+    if not is_session_empty then
+      require("mini.sessions").write("Session.vim")
+    end
   end,
 })
 
