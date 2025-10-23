@@ -35,9 +35,11 @@ done <<<"$apps"
 # Uninstall old apps
 old="$(comm -13 <(echo -e "$apps") <(echo -e "$installed"))"
 
-while IFS= read -r app; do
-  flatpak uninstall --app --noninteractive --user "$app"
-done <<<"$old"
+if [ -n "$old" ]; then
+  while IFS= read -r app; do
+    flatpak uninstall --app --noninteractive --user "$app"
+  done <<<"$old"
+fi
 
 gum style \
   --foreground 212 --border-foreground 212 --border double \
