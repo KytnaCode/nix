@@ -153,9 +153,9 @@
 
       windowrule = [
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
-        "nodim,title:(.*)- YouTube —(.*)"
-        "noblur,title:(.*)- YouTube —(.*)"
-        "opacity 1.0 override 1.0 override 1.0 override,title:(.*)- YouTube —(.*)"
+        "opacity 1.0 override, title:(YouTube)(.*)"
+        "nodim, noblur, title:(YouTube)(.*)"
+        "float, title:Bitwarden"
       ];
     };
   };
