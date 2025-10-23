@@ -27,6 +27,7 @@
     gnome-clocks
     flatpak
     jq
+    qalculate-gtk
 
     # Hyprland related
     hyprpicker
