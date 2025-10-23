@@ -12,7 +12,7 @@
       "todayd" = "mkdir \"$(date --iso-8601)\"";
       "cdtoday" = "cd \"$(date --iso-8601)\"";
       "useflake" = "echo \"use_flake\" >> .envrc";
-      "runbg" = "f() { (\"$@\" 2>&1 > /dev/null &) };f";
+      "runbg" = "f() { (\"$@\" > /dev/null 2>&1 &) };f";
     };
     syntaxHighlighting.enable = true;
 
