@@ -37,6 +37,9 @@
     # Fonts
     merriweather
     montserrat
+    mplus-outline-fonts.githubRelease
+    noto-fonts
+    noto-fonts-cjk-sans
     nerd-fonts.anonymice
     nerd-fonts.symbols-only
 

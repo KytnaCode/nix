@@ -33,14 +33,16 @@
     platformTheme.name = "kvantum";
   };
 
-  fonts.fontconfig = {
-    enable = true;
+  fonts = {
+    fontconfig = {
+      enable = true;
 
-    defaultFonts = {
-      monospace = ["AnonymicePro"];
-      sansSerif = ["Montserrat"];
-      emoji = ["Symbols"];
-      serif = ["Merriweather"];
+      defaultFonts = {
+        monospace = ["AnonymicePro" "Mplus code"];
+        sansSerif = ["Montserrat" "M PLUS 2"];
+        emoji = ["Symbols"];
+        serif = ["Merriweather" "Noto Serif Japanese"];
+      };
     };
   };
   # This value determines the Home Manager release that your
