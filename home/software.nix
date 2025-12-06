@@ -21,6 +21,7 @@
     # Productivity
     firefox
     microsoft-edge
+    zotero
     lunacy
     obsidian
     anki
