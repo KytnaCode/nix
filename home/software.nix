@@ -37,6 +37,7 @@
     # Fonts
     merriweather
     montserrat
+    raleway
     mplus-outline-fonts.githubRelease
     noto-fonts
     noto-fonts-cjk-sans

@@ -39,7 +39,7 @@
 
       defaultFonts = {
         monospace = ["AnonymicePro" "Mplus code"];
-        sansSerif = ["Montserrat" "M PLUS 2"];
+        sansSerif = ["Raleway" "Montserrat" "M PLUS 2"];
         emoji = ["Symbols"];
         serif = ["Merriweather" "Noto Serif Japanese"];
       };
