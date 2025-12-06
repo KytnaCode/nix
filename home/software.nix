@@ -20,6 +20,7 @@
 
     # Productivity
     firefox
+    microsoft-edge
     obsidian
     anki
 

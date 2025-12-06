@@ -2,5 +2,5 @@
   "remotes": {
     "flathub": "https://dl.flathub.org/repo/flathub.flatpakrepo"
   },
-  "apps": ["com.microsoft.Edge"]
+  "apps": []
 }
