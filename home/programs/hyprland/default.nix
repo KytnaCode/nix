@@ -160,8 +160,8 @@
 
       windowrule = [
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
-        "opacity 1.0 override, title:(YouTube)(.*)"
-        "nodim, noblur, title:(YouTube)(.*)"
+        "opacity 1.0 override, title:(.*)(YouTube)(.*)"
+        "nodim, noblur, title:(.*)(YouTube)(.*)"
         "float, title:Bitwarden"
         "float, class:qalculate-gtk"
       ];
