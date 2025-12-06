@@ -28,9 +28,11 @@ while IFS= read -r line; do
 done <<<"$remotes"
 
 # Install apps
-while IFS= read -r app; do
-  flatpak install --user --or-update --noninteractive "$app"
-done <<<"$apps"
+if [ -n "$apps" ]; then
+  while IFS= read -r app; do
+    flatpak install --user --or-update --noninteractive "$app"
+  done <<<"$apps"
+fi
 
 # Uninstall old apps
 old="$(comm -13 <(echo -e "$apps") <(echo -e "$installed"))"
