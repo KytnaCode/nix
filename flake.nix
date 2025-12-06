@@ -27,6 +27,13 @@
       url = "github:mrcjkb/haskell-tools.nvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1&ref=v0.51.0";
+
+    hy3 = {
+      url = "github:outfoxxed/hy3?ref=hlv0.51.0";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
   outputs = inputs @ {
     nixpkgs,
