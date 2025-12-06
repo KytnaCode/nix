@@ -1,4 +1,6 @@
 {
+  xdg.systemDirs.data = ["/home/alex/.local/share"];
+
   xdg.desktopEntries = {
     manuskript = {
       type = "Application";

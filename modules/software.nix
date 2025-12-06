@@ -1,6 +1,7 @@
 {
   inputs,
   system,
+  pkgs,
   ...
 }: {
   programs = {
@@ -29,4 +30,8 @@
 
     flatpak.enable = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    qt6.qtbase
+  ];
 }
