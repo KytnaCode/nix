@@ -43,7 +43,7 @@ require("formatter").setup({
         return {
           exe = "qmlformat",
           args = {
-            util.escape_path(util.get_current_buffer_file_path()),
+            "--inplace",
           },
           stdin = false,
         }
