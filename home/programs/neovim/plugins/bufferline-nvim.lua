@@ -1,7 +1,7 @@
 vim.cmd.colorscheme(vim.g.colorscheme) -- Ensure colorscheme is loaded.
 
 require("bufferline").setup({
-  highlights = require("catppuccin.groups.integrations.bufferline").get(),
+  highlights = require("catppuccin.special.bufferline").get_theme(),
   options = {
     offsets = {
       {
