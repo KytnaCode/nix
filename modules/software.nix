@@ -29,6 +29,8 @@
     };
 
     flatpak.enable = true;
+
+    gnome.gnome-keyring.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
