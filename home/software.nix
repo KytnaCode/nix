@@ -16,20 +16,20 @@
     discord
 
     # Creativity
+    inkscape
+    lunacy
     manuskript
 
     # Productivity
+    anki
     firefox
     microsoft-edge
-    zotero
-    inkscape
-    lunacy
     obsidian
-    anki
+    zotero
 
     # Utility
-    gnome-clocks
     flatpak
+    gnome-clocks
     jq
     qalculate-gtk
 
@@ -40,12 +40,12 @@
     # Fonts
     merriweather
     montserrat
-    raleway
     mplus-outline-fonts.githubRelease
-    noto-fonts
-    noto-fonts-cjk-sans
     nerd-fonts.anonymice
     nerd-fonts.symbols-only
+    noto-fonts
+    noto-fonts-cjk-sans
+    raleway
 
     # System
     pwvucontrol
