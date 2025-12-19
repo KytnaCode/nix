@@ -78,6 +78,7 @@ in {
     extraLuaConfig = with builtins;
       concatStringsSep "\n" [
         "local config = {}"
+        (readFile ./cmds.lua)
         (readFile ./lsp.lua)
         (readFile ./keymaps.lua)
         (readFile ./autocmds.lua)
