@@ -22,6 +22,7 @@
     firefox
     microsoft-edge
     zotero
+    inkscape
     lunacy
     obsidian
     anki
