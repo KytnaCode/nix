@@ -12,7 +12,6 @@
     cursors.enable = true;
     floorp.profiles.default.enable = true;
     fzf.enable = true;
-    gtk.enable = true;
     hyprland.enable = true;
     hyprlock.enable = true;
     kitty.enable = true;
