@@ -10,7 +10,6 @@
     btop.enable = true;
     cava.enable = true;
     cursors.enable = true;
-    floorp.profiles.default.enable = true;
     fzf.enable = true;
     hyprland.enable = true;
     hyprlock.enable = true;
