@@ -8,7 +8,7 @@
       "Session.vim"
     ];
 
-    extraConfig = {
+    settings = {
       init = {
         defaultBranch = "main";
       };
@@ -16,10 +16,10 @@
       credential.helper = ["cache --timeout 18000"];
 
       push.autoSetupRemote = true;
-    };
 
-    userEmail = "kytnacode@gmail.com";
-    userName = "kytnacode";
+      user.email = "kytnacode@gmail.com";
+      user.name = "kytnacode";
+    };
   };
 
   programs.git-credential-oauth.enable = true;
