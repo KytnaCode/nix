@@ -125,7 +125,7 @@ in {
       (mkPlugin lualine-nvim "lualine-nvim.lua")
       (mkPluginEmpty dashboard-nvim "dashboard")
       (mkPlugin bufferline-nvim "bufferline-nvim.lua")
-      (mkPlugin gitsigns-nvim "gitsigns-nvim.lua")
+      (mkPlugin pkgs.vimExtraPlugins.gitsigns-nvim "gitsigns-nvim.lua")
       pkgs.vimExtraPlugins.deadcolumn-nvim
       nui-nvim
       nvim-web-devicons
