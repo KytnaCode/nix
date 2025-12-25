@@ -7,6 +7,7 @@ local servers = {
   "yamlls",
   "ts_ls",
   "tailwindcss",
+  "cssls",
   "qmlls",
   "gopls",
   "basedpyright",

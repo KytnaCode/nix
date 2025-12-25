@@ -31,7 +31,7 @@ in {
       ++ (with pkgs; [
         # Language Servers
         lua-language-server
-        vscode-json-languageserver
+        vscode-langservers-extracted
         yaml-language-server
         typescript-language-server
         tailwindcss-language-server
