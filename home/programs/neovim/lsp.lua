@@ -1,20 +1,20 @@
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local servers = {
-  "nil_ls",
-  "lua_ls",
-  "jsonls",
-  "yamlls",
-  "ts_ls",
-  "tailwindcss",
-  "cssls",
-  "html",
-  "qmlls",
-  "gopls",
   "basedpyright",
-  "clangd",
-  "rust_analyzer",
   "bashls",
+  "clangd",
+  "cssls",
+  "gopls",
+  "html",
+  "jsonls",
+  "lua_ls",
+  "nil_ls",
+  "qmlls",
+  "rust_analyzer",
+  "tailwindcss",
+  "ts_ls",
+  "yamlls",
 }
 
 local config = {
