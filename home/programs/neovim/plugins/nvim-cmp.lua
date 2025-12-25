@@ -58,9 +58,32 @@ cmp.setup.cmdline(":", {
   mapping = cmp.mapping.preset.cmdline(),
   sources = cmp.config.sources({
     { name = "async_path" },
-    { name = "dotenv" },
   }, {
     { name = "cmdline" },
   }),
   matching = { disallow_symbol_nonprefix_matching = false },
+})
+
+vim.api.nvim_create_autocmd("CmdlineChanged", {
+  group = vim.api.nvim_create_augroup("CmpCmdline", {}),
+  desc = "enable dotenv completion source when previous character is a dollar sign",
+  callback = function()
+    local cmd = vim.fn.getcmdline()
+    local pos = vim.fn.getcmdpos()
+
+    while pos > 1 and cmd:sub(pos - 1, pos - 1):match("[%w_%$]") ~= nil do
+      pos = pos - 1
+    end
+
+    local start = string.sub(cmd, pos, pos)
+    if start == "$" then
+      cmp.complete({
+        config = vim.tbl_extend("force", cmp.get_config(), {
+          sources = {
+            { name = "dotenv" },
+          },
+        }),
+      })
+    end
+  end,
 })
