@@ -8,6 +8,7 @@ local servers = {
   "ts_ls",
   "tailwindcss",
   "cssls",
+  "html",
   "qmlls",
   "gopls",
   "basedpyright",
