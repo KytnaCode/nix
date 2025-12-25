@@ -66,6 +66,8 @@
     xserver.videoDrivers = ["nvidia"];
   };
 
+  security.pki.certificateFiles = [./ca.crt];
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.alex = {
     isNormalUser = true;
