@@ -1,33 +1,33 @@
-vim.lsp.enable("nil_ls")
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-vim.lsp.config("nil_ls", {
-  formatting = {
-    command = "alejandra",
+local servers = {
+  "nil_ls",
+  "lua_ls",
+  "jsonls",
+  "yamlls",
+  "ts_ls",
+  "qmlls",
+  "gopls",
+  "basedpyright",
+  "clangd",
+  "rust_analyzer",
+  "bashls",
+}
+
+local config = {
+  ["nil_ls"] = {
+    formatting = {
+      command = "alejandra",
+    },
   },
-})
+  ["qmlls"] = {
+    cmd = { "qmlls", "-E" },
+  },
+}
 
-vim.lsp.enable("lua_ls")
+for _, server in pairs(servers) do
+  local conf = vim.tbl_extend("keep", config[server] or {}, capabilities)
 
-vim.lsp.enable("jsonls")
-
-vim.lsp.enable("yamlls")
-
-vim.lsp.enable("ts_ls")
-
-vim.lsp.enable("qmlls")
-
-vim.lsp.config("qmlls", {
-  cmd = { "qmlls", "-E" },
-})
-
-vim.lsp.enable("gopls")
-
-vim.lsp.enable("basedpyright")
-
--- vim.lsp.enable("hls") -- haskell-tools.nvim automatically configures hls.
-
-vim.lsp.enable("clangd")
-
-vim.lsp.enable("rust_analyzer")
-
-vim.lsp.enable("bashls")
+  vim.lsp.config(server, conf)
+  vim.lsp.enable(server)
+end

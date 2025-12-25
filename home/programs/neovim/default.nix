@@ -106,9 +106,18 @@ in {
       (mkPlugin nvim-lint "nvim-lint.lua")
 
       ## Completion
-      (mkPlugin coq_nvim "coq_nvim.lua")
-      coq-thirdparty
-      coq-artifacts
+      (mkPlugin nvim-cmp "nvim-cmp.lua")
+      cmp-async-path
+      cmp-buffer
+      cmp-calc
+      cmp-cmdline
+      cmp-dotenv
+      cmp-git
+      cmp-nvim-lsp
+      cmp-nvim-lsp-signature-help
+      cmp-tmux
+      cmp_luasnip
+      luasnip
 
       # UI
       {
