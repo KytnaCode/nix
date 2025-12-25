@@ -30,6 +30,7 @@ in {
       ]
       ++ (with pkgs; [
         # Language Servers
+        astro-language-server
         lua-language-server
         vscode-langservers-extracted
         yaml-language-server
