@@ -34,6 +34,7 @@ in {
         vscode-json-languageserver
         yaml-language-server
         typescript-language-server
+        tailwindcss-language-server
         libsForQt5.qt5.qtdeclarative
         gopls
         bash-language-server
