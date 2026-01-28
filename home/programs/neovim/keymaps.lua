@@ -61,6 +61,9 @@ map("n", "bD", "<CMD>Glance definitions<CR>", opts({ desc = "show definiton" }))
 map("n", "bR", "<CMD>Glance references<CR>", opts({ desc = "show references" }))
 map("n", "bY", "<CMD>Glance type_definitions<CR>", opts({ desc = "show type definitions" }))
 map("n", "bM", "<CMD>Glance implementations<CR>", opts({ desc = "show implementations" }))
+map("n", "bI", "<CMD>Lspsaga incoming_calls<CR>", opts({ desc = "show incoming calls" }))
+map("n", "bO", "<CMD>Lspsaga outgoing_calls<CR>", opts({ desc = "show outgoinng calls" }))
+map({ "n", "i" }, [[<M-f>]], "<CMD>Lspsaga code_action<CR>", opts({ desc = "show avalible code actions" }))
 
 -- Fuzzy Find
 local builtins = require("telescope.builtin")
