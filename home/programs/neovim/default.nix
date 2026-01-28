@@ -43,6 +43,11 @@ in {
         haskell-language-server
         rust-analyzer
 
+        # Debugging
+        gdb
+        lldb
+        vscode-extensions.vadimcn.vscode-lldb.adapter
+
         # Formatters & Linters
 
         ## Typescript & Javascript
@@ -103,6 +108,10 @@ in {
       (mkPlugin snacks-nvim "snacks-nvim.lua")
       (mkPlugin ts-autotag-nvim "ts-autotag-nvim.lua")
       (mkPluginEmpty otter-nvim "otter")
+
+      # Debugging
+      (mkPlugin nvim-dap "nvim-dap.lua")
+      (mkPluginEmpty nvim-dap-ui "dapui")
 
       ## Formatting & Linting
       (mkPlugin formatter-nvim "formatter-nvim.lua")

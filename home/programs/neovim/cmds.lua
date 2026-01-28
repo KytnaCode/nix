@@ -26,3 +26,12 @@ end, {
   complete = "file",
   bang = true,
 })
+
+local dap, dapui = require("dap"), require("dapui")
+
+cmd("DapTerminate", function()
+  dap.termiante()
+  dapui.close()
+end, {
+  desc = "terminate dap session and close dap ui",
+})
