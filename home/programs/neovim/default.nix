@@ -101,7 +101,6 @@ in {
       (mkPlugin nvim-lightbulb "nvim-lightbulb.lua")
       (mkPlugin snacks-nvim "snacks-nvim.lua")
       (mkPlugin ts-autotag-nvim "ts-autotag-nvim.lua")
-      (mkPluginEmpty inc-rename-nvim "inc_rename")
       (mkPluginEmpty otter-nvim "otter")
 
       ## Formatting & Linting

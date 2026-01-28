@@ -23,7 +23,7 @@ end
 -- Editing
 map("i", [[<c-n>]], "<CMD>normal $<CR>", opts({ desc = "go to end of line" }))
 map("i", [[<c-b>]], "<CMD>normal ^<CR>", opts({ desc = "got to start of line" }))
-map("n", [[<leader>rn]], "<CMD>IncRename<CR>", opts({ desc = "rename symbol under cursor" }))
+map("n", [[<leader>rn]], "<CMD>Lspsaga rename<CR>", opts({ desc = "rename symbol under cursor" }))
 map("n", [[<leader>xx]], "<CMD>Trouble diagnostics<CR>", opts({ desc = "open diagnostics" }))
 map({ "n", "v" }, [[d]], [["_d]], opts())
 map({ "n", "x", "o" }, [[<C-s>]], "<Plug>(leap)")
