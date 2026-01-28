@@ -12,7 +12,7 @@ local servers = {
   "lua_ls",
   "nil_ls",
   "qmlls",
-  "rust_analyzer",
+  -- "rust_analyzer", -- configured by rustacean.nvim
   "tailwindcss",
   "ts_ls",
   "yamlls",
