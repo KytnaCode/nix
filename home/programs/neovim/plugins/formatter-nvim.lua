@@ -33,7 +33,11 @@ require("formatter").setup({
       require("formatter.filetypes.haskell").ormolu,
     },
     rust = {
-      require("formatter.filetypes.rust").rustfmt,
+      function()
+        local conf = require("formatter.filetypes.rust").rustfmt()
+        conf.args = {}
+        return conf
+      end,
     },
     sh = {
       require("formatter.filetypes.sh").shfmt,
