@@ -48,8 +48,8 @@ map("n", [[>]], function()
   vim.cmd.bn()
 end, opts({ desc = "next buffer" }))
 
-map("n", [[<M-S-.>]], "<CMD>BufferLineMoveNext<CR>", opts({ desc = "move right current buffer tab" }))
-map("n", [[<M-S-,>]], "<CMD>BufferLineMovePrev<CR>", opts({ desc = "move left current buffer tab" }))
+map("n", [[<M-.>]], "<CMD>BufferLineMoveNext<CR>", opts({ desc = "move right current buffer tab" }))
+map("n", [[<M-,>]], "<CMD>BufferLineMovePrev<CR>", opts({ desc = "move left current buffer tab" }))
 map("n", [[<M-c>]], Snacks.bufdelete.delete, opts({ desc = "close buffer" }))
 
 -- File Explorer
