@@ -158,13 +158,13 @@ in {
       }
       (mkPlugin mini-nvim "mini-nvim.lua")
       (mkPlugin telescope-nvim "telescope-nvim.lua")
+      (mkPlugin twilight-nvim "twilight-nvim.lua")
       (mkPluginEmpty trouble-nvim "trouble")
       leap-nvim
       vim-fugitive
       vim-repeat
       telescope_hoogle
       zen-mode-nvim
-      twilight-nvim
       mkdir-nvim
 
       # Misc
