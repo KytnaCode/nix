@@ -97,6 +97,7 @@ in {
       pkgs.vimExtraPlugins.guihua-lua
       inputs.haskell-tools-nvim.packages.${pkgs.stdenv.hostPlatform.system}.default
       (mkPlugin lsp_signature-nvim "lsp_signature-nvim.lua")
+      (mkPlugin lspsaga-nvim "lspsaga-nvim.lua")
       (mkPlugin nvim-lightbulb "nvim-lightbulb.lua")
       (mkPlugin snacks-nvim "snacks-nvim.lua")
       (mkPlugin ts-autotag-nvim "ts-autotag-nvim.lua")
