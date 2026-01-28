@@ -18,7 +18,9 @@ require("mini.splitjoin").setup()
 
 -- Sessions
 
-require("mini.sessions").setup()
+require("mini.sessions").setup({
+  autoread = true,
+})
 
 -- Sorround text actions.
 require("mini.surround").setup()
