@@ -77,7 +77,7 @@ map("n", [[<leader>zt]], "<CMD>Twilight<CR>", opts({ desc = "toggle twilight mod
 map({ "n", "i", "t" }, [[<c-\>]], "<CMD>ToggleTerm direction=horizontal<CR>", opts({ desc = "toggle terminal" }))
 map(
   { "n", "i", "t" },
-  [[<c-f><c-\>]],
+  [[<C-M-\>]],
   "<CMD>ToggleTerm direction=float<CR>",
   opts({
     desc = "toggle floating terminal",
