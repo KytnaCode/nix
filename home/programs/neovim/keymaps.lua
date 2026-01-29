@@ -29,6 +29,8 @@ map({ "n", "v" }, [[d]], [["_d]], opts())
 map({ "n", "x", "o" }, [[<C-s>]], "<Plug>(leap)")
 
 -- Buffers
+local bufferline = require("bufferline")
+
 map({ "n", "i", "v" }, [[<C-f>]], "<CMD>Format<CR>", opts({ desc = "Format file" }))
 map({ "n", "i", "v" }, [[<C-l>]], lint.try_lint, opts({ desc = "lint file" }))
 
@@ -37,7 +39,7 @@ map("n", [[<]], function()
     return
   end
 
-  vim.cmd.bp()
+  bufferline.cycle(-1) -- previous buffer
 end, opts({ desc = "prev buffer" }))
 
 map("n", [[>]], function()
@@ -45,7 +47,7 @@ map("n", [[>]], function()
     return
   end
 
-  vim.cmd.bn()
+  bufferline.cycle(1) -- next buffer
 end, opts({ desc = "next buffer" }))
 
 map("n", [[<M-.>]], "<CMD>BufferLineMoveNext<CR>", opts({ desc = "move right current buffer tab" }))
