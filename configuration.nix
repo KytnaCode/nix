@@ -53,6 +53,11 @@
     hunspellDicts.en_US
   ];
 
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
+
   services = {
     # Connfigure Audio.
     pipewire = {
