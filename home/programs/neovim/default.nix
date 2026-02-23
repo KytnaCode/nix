@@ -97,7 +97,6 @@ in {
       # LSP
       nvim-lspconfig
       nvim-treesitter.withAllGrammars
-      go-nvim
       glance-nvim
       pkgs.vimExtraPlugins.guihua-lua
       rustaceanvim
@@ -108,6 +107,7 @@ in {
       (mkPlugin snacks-nvim "snacks-nvim.lua")
       (mkPlugin ts-autotag-nvim "ts-autotag-nvim.lua")
       (mkPluginEmpty otter-nvim "otter")
+      (mkPluginEmpty go-nvim "go")
 
       # Debugging
       (mkPlugin nvim-dap "nvim-dap.lua")
