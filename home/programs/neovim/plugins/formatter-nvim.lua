@@ -59,9 +59,7 @@ require("formatter").setup({
           exe = "golangci-lint",
           args = {
             "fmt",
-            "--stdin",
           },
-          stdin = true,
         }
       end,
     },
