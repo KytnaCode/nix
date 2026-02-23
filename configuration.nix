@@ -4,6 +4,7 @@
 {
   pkgs,
   inputs,
+  lib,
   ...
 }: {
   imports = [
@@ -24,7 +25,7 @@
     [
       inputs.nixneovimplugins.overlays.default
     ]
-    ++ import ./overlays;
+    ++ import ./overlays {inherit lib;};
 
   nixpkgs.config.allowUnfree = true;
 
