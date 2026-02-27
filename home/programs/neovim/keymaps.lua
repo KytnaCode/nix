@@ -21,6 +21,24 @@ local function opts(o)
 end
 
 -- Editing
+local ls = require("luasnip")
+
+map({ "i" }, "<C-K>", function()
+  ls.expand()
+end, { silent = true })
+map({ "i", "s" }, "<C-L>", function()
+  ls.jump(1)
+end, { silent = true })
+map({ "i", "s" }, "<C-J>", function()
+  ls.jump(-1)
+end, { silent = true })
+
+map({ "i", "s" }, "<C-E>", function()
+  if ls.choice_active() then
+    ls.change_choice(1)
+  end
+end, { silent = true })
+
 map("i", [[<c-n>]], "<CMD>normal $<CR>", opts({ desc = "go to end of line" }))
 map("i", [[<c-b>]], "<CMD>normal ^<CR>", opts({ desc = "got to start of line" }))
 map("n", [[<leader>rn]], "<CMD>Lspsaga rename<CR>", opts({ desc = "rename symbol under cursor" }))
