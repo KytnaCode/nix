@@ -80,6 +80,7 @@ in {
         # Misc
         bc
         ripgrep
+        luajitPackages.jsregexp
       ]);
 
     extraLuaConfig = with builtins;
