@@ -83,7 +83,13 @@ in {
         luajitPackages.jsregexp
       ]);
 
-    extraLuaConfig = with builtins;
+    extraLuaConfig = with builtins; let
+      snippets = with pkgs.vscode-extensions; ''
+        require("luasnip.loaders.from_vscode").lazy_load({
+          "${golang.go}/share/vscode/extensions/golang.Go"
+        })
+      '';
+    in
       concatStringsSep "\n" [
         "local config = {}"
         (readFile ./cmds.lua)
@@ -91,6 +97,7 @@ in {
         (readFile ./keymaps.lua)
         (readFile ./autocmds.lua)
         (readFile ./options.lua)
+        snippets
         "vim.opt.rtp:prepend('${rtp}/after')"
       ];
 
