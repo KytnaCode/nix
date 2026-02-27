@@ -18,6 +18,8 @@
       enable = true;
       openFirewall = true;
     };
+
+    steam.enable = true;
   };
 
   services = {
