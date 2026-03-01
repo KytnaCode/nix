@@ -4,6 +4,7 @@
     ./direnv.nix
     ./fzf.nix
     ./cava.nix
+    ./gh.nix
     ./git.nix
     ./hyprland
     ./kitty.nix
