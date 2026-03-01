@@ -59,7 +59,6 @@
         "stack"
         "systemd"
         "tmux"
-        "tmuxinator"
         "vagrant"
         "zoxide"
       ];
