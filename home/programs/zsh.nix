@@ -25,7 +25,6 @@
       plugins = [
         "alias-finder"
         "aliases"
-        "azure"
         "bun"
         "cabal"
         "colored-man-pages"
