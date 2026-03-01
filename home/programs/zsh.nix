@@ -27,6 +27,7 @@
         "aliases"
         "aws"
         "azure"
+        "bun"
         "cabal"
         "colored-man-pages"
         "command-not-found"
