@@ -14,6 +14,8 @@
       "useflake" = "echo \"use_flake\" >> .envrc";
       "runbg" = "f() { (\"$@\" > /dev/null 2>&1 &) };f";
       "cdtmp" = "cd $(mktemp -d)";
+      "rma" = "rm -r * .*";
+      "rmaf" = "rm -rf * .*";
     };
     syntaxHighlighting.enable = true;
 
