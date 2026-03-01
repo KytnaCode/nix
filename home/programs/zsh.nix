@@ -54,6 +54,7 @@
         "pip"
         "podman"
         "postgres"
+        "python"
         "rust"
         "sbt"
         "scala"
