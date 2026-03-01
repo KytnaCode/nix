@@ -56,7 +56,6 @@
         "rust"
         "safe-paste"
         "sbt"
-        "scala"
         "ssh"
         "stack"
         "systemd"
