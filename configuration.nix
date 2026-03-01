@@ -54,9 +54,13 @@
     hunspellDicts.en_US
   ];
 
-  virtualisation.docker.rootless = {
-    enable = true;
-    setSocketVariable = true;
+  virtualisation = {
+    docker.rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+
+    virtualbox.host.enable = true;
   };
 
   services = {
