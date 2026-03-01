@@ -47,6 +47,7 @@
         "kitty"
         "lol"
         "mongocli"
+        "ngork"
         "nmap"
         "node"
         "npm"
