@@ -44,7 +44,6 @@
         "gpg-agent"
         "kitty"
         "lol"
-        "mongocli"
         "ngork"
         "nmap"
         "node"
