@@ -56,6 +56,7 @@
         "postgres"
         "python"
         "qrcode"
+        "rsync"
         "rust"
         "sbt"
         "scala"
