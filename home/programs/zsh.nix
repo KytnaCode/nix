@@ -25,7 +25,6 @@
       plugins = [
         "alias-finder"
         "aliases"
-        "aws"
         "azure"
         "bun"
         "cabal"
