@@ -63,6 +63,7 @@
         "scala"
         "ssh"
         "stack"
+        "systemd"
         "tmux"
         "tmuxinator"
         "zoxide"
