@@ -50,7 +50,6 @@
         "npm"
         "pip"
         "podman"
-        "postgres"
         "python"
         "qrcode"
         "rsync"
