@@ -55,7 +55,6 @@
         "rsync"
         "rust"
         "safe-paste"
-        "sbt"
         "ssh"
         "stack"
         "systemd"
