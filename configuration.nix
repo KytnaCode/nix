@@ -81,6 +81,8 @@
       jack.enable = true;
     };
 
+    nfs.server.enable = true;
+
     # NVidia Propetiary drivers.
     xserver.videoDrivers = ["nvidia"];
   };
