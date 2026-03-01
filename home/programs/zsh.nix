@@ -38,6 +38,7 @@
         "dotenv"
         "fancy-ctrl-z"
         "fzf"
+        "gh"
         "git"
         "github"
         "gitignore"
