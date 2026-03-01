@@ -58,6 +58,7 @@
         "qrcode"
         "rsync"
         "rust"
+        "safe-paste"
         "sbt"
         "scala"
         "ssh"
