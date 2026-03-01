@@ -66,6 +66,7 @@
         "systemd"
         "tmux"
         "tmuxinator"
+        "vagrant"
         "zoxide"
       ];
     };
