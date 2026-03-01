@@ -44,7 +44,7 @@
         "gpg-agent"
         "kitty"
         "lol"
-        "ngork"
+        "ngrok"
         "nmap"
         "node"
         "npm"
