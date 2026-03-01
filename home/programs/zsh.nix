@@ -55,6 +55,7 @@
         "podman"
         "postgres"
         "python"
+        "qrcode"
         "rust"
         "sbt"
         "scala"
