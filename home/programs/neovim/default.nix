@@ -86,7 +86,7 @@ in {
     extraLuaConfig = with builtins; let
       snippets = with pkgs.vscode-extensions; ''
         require("luasnip.loaders.from_vscode").lazy_load({
-          "${golang.go}/share/vscode/extensions/golang.Go"
+          paths = "${./snippets}",
         })
       '';
     in
