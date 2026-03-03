@@ -1,9 +1,9 @@
 {
   imports = [
     ./bat.nix
+    ./cava.nix
     ./direnv.nix
     ./fzf.nix
-    ./cava.nix
     ./gh.nix
     ./git.nix
     ./hyprland
