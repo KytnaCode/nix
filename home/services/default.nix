@@ -1,9 +1,5 @@
-{
-  imports = [
-    ./hypridle.nix
-    ./hyprpaper
-    ./swaync.nix
-  ];
+{myutils, ...}: {
+  imports = myutils.listDir ./. "default.nix";
 
   # Too small to have a dedicated file:
   services = {
