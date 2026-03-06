@@ -1,0 +1,3 @@
+{
+  programs.numbat.enable = true;
+}
