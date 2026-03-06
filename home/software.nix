@@ -30,7 +30,6 @@
     # Utility
     flatpak
     gnome-clocks
-    jq
     qalculate-gtk
 
     # Hyprland related
