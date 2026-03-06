@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  user,
   ...
 }: {
   imports = [
@@ -12,8 +13,8 @@
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home = {
-    username = "alex";
-    homeDirectory = "/home/alex";
+    username = user;
+    homeDirectory = "/home/${user}";
 
     activation = {
       install-flatpak = lib.hm.dag.entryAfter ["installPackages"] ''

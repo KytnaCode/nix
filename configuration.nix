@@ -5,6 +5,7 @@
   pkgs,
   inputs,
   lib,
+  user,
   ...
 }: {
   imports = [
@@ -90,7 +91,7 @@
   security.pki.certificateFiles = [./ca.crt];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.alex = {
+  users.users.${user} = {
     isNormalUser = true;
     extraGroups = [
       "wheel" # Enable ‘sudo’ for the user.

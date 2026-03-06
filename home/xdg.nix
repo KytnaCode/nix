@@ -1,5 +1,5 @@
-{
-  xdg.systemDirs.data = ["/home/alex/.local/share"];
+{user, ...}: {
+  xdg.systemDirs.data = ["/home/${user}/.local/share"];
 
   xdg.desktopEntries = {
     manuskript = {

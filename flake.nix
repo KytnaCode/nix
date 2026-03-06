@@ -50,6 +50,7 @@
   }: let
     system = "x86_64-linux";
     myutils = import ./myutils.nix {inherit (nixpkgs) lib;};
+    user = "alex";
   in {
     # NOTE: 'nixos' is the default hostname
     nixosConfigurations.alex-linux = nixpkgs.lib.nixosSystem {
@@ -64,7 +65,7 @@
             useGlobalPkgs = true;
             useUserPackages = true;
 
-            users.alex = {
+            users.${user} = {
               imports = [
                 ./home
                 catppuccin.homeModules.catppuccin
@@ -73,14 +74,14 @@
 
             extraSpecialArgs = {
               inherit (nil.packages.${system}) nil;
-              inherit inputs system myutils;
+              inherit inputs system myutils user;
             };
           };
         }
       ];
 
       specialArgs = {
-        inherit system inputs myutils;
+        inherit system inputs myutils user;
       };
     };
   };
