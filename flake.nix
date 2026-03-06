@@ -49,6 +49,7 @@
     ...
   }: let
     system = "x86_64-linux";
+    myutils = import ./myutils.nix {inherit (nixpkgs) lib;};
   in {
     # NOTE: 'nixos' is the default hostname
     nixosConfigurations.alex-linux = nixpkgs.lib.nixosSystem {
@@ -72,14 +73,14 @@
 
             extraSpecialArgs = {
               inherit (nil.packages.${system}) nil;
-              inherit inputs system;
+              inherit inputs system myutils;
             };
           };
         }
       ];
 
       specialArgs = {
-        inherit system inputs;
+        inherit system inputs myutils;
       };
     };
   };
