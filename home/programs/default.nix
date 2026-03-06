@@ -1,5 +1,6 @@
 {
   imports = [
+    ./anki.nix
     ./bat.nix
     ./cava.nix
     ./direnv.nix

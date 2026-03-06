@@ -21,7 +21,6 @@
     manuskript
 
     # Productivity
-    anki
     firefox
     microsoft-edge
     (pkgs.writeShellScriptBin "microsoft-edge-stable" "${pkgs.microsoft-edge}/bin/microsoft-edge \"$@\"")
