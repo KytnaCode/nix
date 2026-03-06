@@ -29,6 +29,9 @@
     gnome-clocks
     qalculate-gtk
 
+    # Games
+    prismlauncher
+
     # Hyprland related
     hyprpicker
 
