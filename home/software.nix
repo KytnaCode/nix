@@ -34,7 +34,6 @@
 
     # Hyprland related
     hyprpicker
-    hyprshot
 
     # Fonts
     merriweather
