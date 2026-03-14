@@ -45,6 +45,8 @@
     nvidia.open = false;
 
     bluetooth.enable = true;
+
+    opentabletdriver.enable = true;
   };
 
   environment.pathsToLink = ["/share/zsh"];
@@ -86,6 +88,7 @@
 
     # NVidia Propetiary drivers.
     xserver.videoDrivers = ["nvidia"];
+    xserver.digimend.enable = true;
   };
 
   security.pki.certificateFiles = [./ca.crt];
