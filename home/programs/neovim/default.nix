@@ -33,6 +33,7 @@ in {
         astro-language-server
         bash-language-server
         clang-tools
+        docker-language-server
         gopls
         haskell-language-server
         libsForQt5.qt5.qtdeclarative

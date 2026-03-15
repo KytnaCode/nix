@@ -6,6 +6,7 @@ local servers = {
   "bashls",
   "clangd",
   "cssls",
+  "docker_language_server",
   "gopls",
   "html",
   "jsonls",
