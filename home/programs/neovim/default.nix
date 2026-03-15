@@ -31,17 +31,17 @@ in {
       ++ (with pkgs; [
         # Language Servers
         astro-language-server
-        lua-language-server
-        vscode-langservers-extracted
-        yaml-language-server
-        typescript-language-server
-        tailwindcss-language-server
-        libsForQt5.qt5.qtdeclarative
-        gopls
         bash-language-server
         clang-tools
+        gopls
         haskell-language-server
+        libsForQt5.qt5.qtdeclarative
+        lua-language-server
         rust-analyzer
+        tailwindcss-language-server
+        typescript-language-server
+        vscode-langservers-extracted
+        yaml-language-server
 
         # Debugging
         gdb
@@ -51,8 +51,8 @@ in {
         # Formatters & Linters
 
         ## Typescript & Javascript
-        prettierd
         eslint_d
+        prettierd
 
         ## Nix
         alejandra
@@ -70,17 +70,17 @@ in {
         ormolu
 
         # Rust
-        rustfmt
         clippy
+        rustfmt
 
         # Shell
-        shfmt
         shellcheck
+        shfmt
 
         # Misc
         bc
-        ripgrep
         luajitPackages.jsregexp
+        ripgrep
       ]);
 
     extraLuaConfig = with builtins; let
