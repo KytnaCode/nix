@@ -85,7 +85,7 @@ in {
       ]);
 
     extraLuaConfig = with builtins; let
-      snippets = with pkgs.vscode-extensions; ''
+      snippets = ''
         require("luasnip.loaders.from_vscode").lazy_load({
           paths = "${./snippets}",
         })
