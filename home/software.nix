@@ -30,6 +30,7 @@
     qalculate-gtk
     unzip
     glow
+    nix-index
 
     # Games
     prismlauncher
