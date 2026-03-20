@@ -932,6 +932,26 @@
         "type": "github"
       }
     },
+    "nix-index-database": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1773552174,
+        "narHash": "sha256-mHSRNrT1rjeYBgkAlj07dW3+1nFEgAd8Gu6lgyfT9DU=",
+        "owner": "nix-community",
+        "repo": "nix-index-database",
+        "rev": "8faeb68130df077450451b6734a221ba0d6cde42",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "nix-index-database",
+        "type": "github"
+      }
+    },
     "nixneovimplugins": {
       "inputs": {
         "flake-utils": "flake-utils_2",
@@ -1200,6 +1220,7 @@
         "hy3": "hy3",
         "hyprland": "hyprland",
         "nil": "nil",
+        "nix-index-database": "nix-index-database",
         "nixneovimplugins": "nixneovimplugins",
         "nixpkgs": "nixpkgs_8",
         "quickshell": "quickshell",

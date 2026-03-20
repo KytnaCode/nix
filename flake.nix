@@ -39,6 +39,11 @@
       url = "github:outfoxxed/hy3?ref=hl0.52.0";
       inputs.hyprland.follows = "hyprland";
     };
+
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = inputs @ {
     nixpkgs,
@@ -46,6 +51,7 @@
     nil,
     catppuccin,
     nixneovimplugins,
+    nix-index-database,
     ...
   }: let
     system = "x86_64-linux";
@@ -59,6 +65,7 @@
       modules = [
         ./configuration.nix
         catppuccin.nixosModules.catppuccin
+        nix-index-database.nixosModules.default
         home-manager.nixosModules.home-manager
         {
           home-manager = {
