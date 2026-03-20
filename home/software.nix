@@ -28,6 +28,7 @@
     flatpak
     gnome-clocks
     qalculate-gtk
+    unzip
 
     # Games
     prismlauncher
