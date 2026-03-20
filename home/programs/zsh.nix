@@ -16,6 +16,7 @@
       "cdtmp" = "cd $(mktemp -d)";
       "rma" = "rm -r * .*";
       "rmaf" = "rm -rf * .*";
+      "icat" = "kitty icat";
     };
     syntaxHighlighting.enable = true;
 
