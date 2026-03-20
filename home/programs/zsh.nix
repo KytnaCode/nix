@@ -13,6 +13,7 @@
       "cdtoday" = "cd \"$(date --iso-8601)\"";
       "useflake" = "echo \"use_flake\" >> .envrc";
       "runbg" = "f() { (\"$@\" > /dev/null 2>&1 &) };f";
+      "nixbg" = "f() { (nix run \"$@\" > /dev/null 2>&1 &) };f";
       "cdtmp" = "cd $(mktemp -d)";
       "rma" = "rm -r * .*";
       "rmaf" = "rm -rf * .*";
