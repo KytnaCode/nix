@@ -1,3 +1,0 @@
-{
-  programs.jqp.enable = true;
-}

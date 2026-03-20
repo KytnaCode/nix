@@ -51,4 +51,15 @@
     pwvucontrol
     wl-clipboard
   ];
+
+  # To small to have a separated file.
+  programs = {
+    discord.enable = true;
+    distrobox.enable = true;
+    gh.enable = true;
+    jq.enable = true;
+    jqp.enable = true;
+    nix-index.enable = true;
+    numbat.enable = true;
+  };
 }
