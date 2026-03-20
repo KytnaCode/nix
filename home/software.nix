@@ -29,6 +29,7 @@
     gnome-clocks
     qalculate-gtk
     unzip
+    glow
 
     # Games
     prismlauncher
