@@ -80,7 +80,6 @@
             };
 
             extraSpecialArgs = {
-              inherit (nil.packages.${system}) nil;
               inherit inputs system myutils user;
             };
           };

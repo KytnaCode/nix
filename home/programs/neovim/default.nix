@@ -1,7 +1,7 @@
 {
   pkgs,
   lib,
-  nil,
+  system,
   inputs,
   ...
 }: let
@@ -26,7 +26,7 @@ in {
 
     extraPackages =
       [
-        nil
+        inputs.nil.packages.${system}.default
       ]
       ++ (with pkgs; [
         # Language Servers
