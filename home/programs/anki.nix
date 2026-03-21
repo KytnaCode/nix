@@ -9,6 +9,7 @@
       autoSyncMediaMinutes = 5;
       networkTimeout = 15;
       syncMedia = true;
+      keyFile = "/home/alex/.secrets/anki.key";
       username = "kytnacode@gmail.com";
     };
 
