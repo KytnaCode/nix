@@ -175,7 +175,7 @@ in {
           })'';
       }
       (mkPlugin mini-nvim "mini-nvim.lua")
-      (mkPlugin telescope-nvim "telescope-nvim.lua")
+      (mkPlugin pkgs.vimExtraPlugins.telescope-nvim-nvim-telescope "telescope-nvim.lua")
       (mkPlugin twilight-nvim "twilight-nvim.lua")
       (mkPluginEmpty trouble-nvim "trouble")
       leap-nvim
