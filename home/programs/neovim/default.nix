@@ -84,7 +84,7 @@ in {
         ripgrep
       ]);
 
-    extraLuaConfig = with builtins; let
+    initLua = with builtins; let
       snippets = ''
         require("luasnip.loaders.from_vscode").lazy_load({
           paths = "${./snippets}",
@@ -107,7 +107,7 @@ in {
       nvim-lspconfig
       nvim-treesitter.withAllGrammars
       glance-nvim
-      pkgs.vimExtraPlugins.guihua-lua
+      pkgs.vimExtraPlugins.guihua-lua-ray-x
       rustaceanvim
       inputs.haskell-tools-nvim.packages.${pkgs.stdenv.hostPlatform.system}.default
       (mkPlugin lsp_signature-nvim "lsp_signature-nvim.lua")
@@ -157,8 +157,8 @@ in {
       (mkPlugin lualine-nvim "lualine-nvim.lua")
       (mkPluginEmpty dashboard-nvim "dashboard")
       (mkPlugin bufferline-nvim "bufferline-nvim.lua")
-      (mkPlugin pkgs.vimExtraPlugins.gitsigns-nvim "gitsigns-nvim.lua")
-      pkgs.vimExtraPlugins.deadcolumn-nvim
+      (mkPlugin pkgs.vimExtraPlugins.gitsigns-nvim-lewis6991 "gitsigns-nvim.lua")
+      pkgs.vimExtraPlugins.deadcolumn-nvim-Bekaboo
       nui-nvim
       nvim-web-devicons
 
