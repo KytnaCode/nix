@@ -4,7 +4,7 @@
     style = "anki";
     theme = "followSystem";
 
-    sync = {
+    profiles."Arya".sync = {
       autoSync = true;
       autoSyncMediaMinutes = 5;
       networkTimeout = 15;
