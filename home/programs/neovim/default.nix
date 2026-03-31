@@ -90,17 +90,20 @@ in {
           paths = "${./snippets}",
         })
       '';
-    in
-      concatStringsSep "\n" [
+      early = lib.mkOrder 100 (concatStringsSep "\n" [
         "local config = {}"
-        (readFile ./cmds.lua)
+        (readFile ./options.lua)
+      ]);
+      late = lib.mkAfter (concatStringsSep "\n" [
         (readFile ./lsp.lua)
+        (readFile ./cmds.lua)
         (readFile ./keymaps.lua)
         (readFile ./autocmds.lua)
-        (readFile ./options.lua)
         snippets
         "vim.opt.rtp:prepend('${rtp}/after')"
-      ];
+      ]);
+    in
+      lib.mkMerge [early late];
 
     plugins = with pkgs.vimPlugins; [
       # LSP
