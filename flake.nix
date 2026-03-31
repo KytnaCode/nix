@@ -56,8 +56,11 @@
   }: let
     system = "x86_64-linux";
     myutils = import ./myutils.nix {inherit (nixpkgs) lib;};
+    pkgs = import nixpkgs {inherit system;};
     user = "alex";
   in {
+    formatter.${system} = pkgs.alejandra;
+
     # NOTE: 'nixos' is the default hostname
     nixosConfigurations.alex-linux = nixpkgs.lib.nixosSystem {
       inherit system;
