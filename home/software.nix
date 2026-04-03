@@ -22,6 +22,7 @@
     microsoft-edge
     obsidian
     zotero
+    github-copilot-cli
 
     # Utility
     flatpak
