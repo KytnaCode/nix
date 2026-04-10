@@ -1,65 +1,95 @@
+local function toggle(formatter, name, default)
+  if vim.g[name] == nil then
+    vim.g[name] = default
+  end
+
+  return function()
+    local opt = vim.g[name]
+
+    if opt == nil then
+      opt = default
+    end
+
+    if opt == 1 then
+      if type(formatter) == "function" then
+        formatter = formatter()
+      end
+
+      return formatter
+    end
+
+    return nil
+  end
+end
+
+local function rustfmt()
+  local conf = require("formatter.filetypes.rust").rustfmt()
+  conf.args = {}
+  return conf
+end
+
+local qmlformat = {
+  exe = "qmlformat",
+  args = {
+    "--inplace",
+  },
+  stdin = false,
+}
+
+local golangci = {
+  exe = "golangci-lint",
+  args = {
+    "fmt",
+  },
+}
+
 require("formatter").setup({
   filetype = {
     lua = {
-      require("formatter.filetypes.lua").stylua,
+      toggle(require("formatter.filetypes.lua").stylua, "stylua", 1),
     },
     nix = {
-      require("formatter.filetypes.nix").alejandra,
+      toggle(require("formatter.filetypes.nix").alejandra, "alejandra", 1),
     },
     json = {
-      require("formatter.filetypes.json").prettierd,
+      toggle(require("formatter.filetypes.json").prettierd, "prettier", 1),
     },
     yaml = {
-      require("formatter.filetypes.yaml").prettierd,
+      toggle(require("formatter.filetypes.yaml").prettierd, "prettier", 1),
     },
     javascript = {
-      require("formatter.filetypes.javascript").prettierd,
+      toggle(require("formatter.filetypes.javascript").eslint_d, "eslint", 0),
+      toggle(require("formatter.filetypes.javascript").prettierd, "prettier", 1),
     },
     typescript = {
-      require("formatter.filetypes.typescript").prettierd,
+      toggle(require("formatter.filetypes.typescript").eslint_d, "eslint", 0),
+      toggle(require("formatter.filetypes.typescript").prettierd, "prettier", 1),
     },
     javascriptreact = {
-      require("formatter.filetypes.javascriptreact").prettierd,
+      toggle(require("formatter.filetypes.javascriptreact").eslint_d, "eslint", 0),
+      toggle(require("formatter.filetypes.javascriptreact").prettierd, "prettier", 1),
     },
     typescriptreact = {
-      require("formatter.filetypes.typescriptreact").prettierd,
+      toggle(require("formatter.filetypes.typescriptreact").eslint_d, "eslint", 0),
+      toggle(require("formatter.filetypes.typescriptreact").prettierd, "prettier", 1),
     },
     python = {
-      require("formatter.filetypes.python").black,
+      toggle(require("formatter.filetypes.python").black, "black", 1),
     },
     haskell = {
-      require("formatter.filetypes.haskell").ormolu,
+      toggle(require("formatter.filetypes.haskell").ormolu, "ormolu", 1),
     },
     rust = {
-      function()
-        local conf = require("formatter.filetypes.rust").rustfmt()
-        conf.args = {}
-        return conf
-      end,
+      toggle(rustfmt, "rustfmt", 1),
     },
     sh = {
-      require("formatter.filetypes.sh").shfmt,
+      toggle(require("formatter.filetypes.sh").shfmt, "shfmt", 1),
     },
     qml = {
-      function()
-        return {
-          exe = "qmlformat",
-          args = {
-            "--inplace",
-          },
-          stdin = false,
-        }
-      end,
+      toggle(qmlformat, "qmlformat", 1),
     },
     go = {
-      function()
-        return {
-          exe = "golangci-lint",
-          args = {
-            "fmt",
-          },
-        }
-      end,
+      toggle(golangci, "golangci-fmt", 1),
     },
     ["*"] = {
       require("formatter.filetypes.any").remove_trailing_whitespace,
