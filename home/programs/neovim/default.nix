@@ -113,6 +113,7 @@ in {
       pkgs.vimExtraPlugins.guihua-lua-ray-x
       rustaceanvim
       inputs.haskell-tools-nvim.packages.${pkgs.stdenv.hostPlatform.system}.default
+      SchemaStore-nvim
       (mkPlugin lspsaga-nvim "lspsaga-nvim.lua")
       (mkPlugin nvim-lightbulb "nvim-lightbulb.lua")
       (mkPlugin snacks-nvim "snacks-nvim.lua")

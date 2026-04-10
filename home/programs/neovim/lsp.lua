@@ -27,6 +27,25 @@ local config = {
   ["qmlls"] = {
     cmd = { "qmlls", "-E" },
   },
+  ["jsonls"] = {
+    settings = {
+      json = {
+        schemas = require("schemastore").json.schemas(),
+        validate = { enable = true },
+      },
+    },
+  },
+  ["yamlls"] = {
+    settings = {
+      yaml = {
+        SchemaStore = {
+          enable = false,
+          url = "",
+        },
+        schemas = require("schemastore").yaml.schemas(),
+      },
+    },
+  },
 }
 
 for _, server in pairs(servers) do
