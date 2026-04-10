@@ -93,6 +93,7 @@ in {
       early = lib.mkOrder 100 (concatStringsSep "\n" [
         "local config = {}"
         (readFile ./options.lua)
+        (readFile ./filetype.lua)
       ]);
       late = lib.mkAfter (concatStringsSep "\n" [
         (readFile ./lsp.lua)
