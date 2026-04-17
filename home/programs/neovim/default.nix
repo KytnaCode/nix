@@ -115,6 +115,7 @@ in {
       rustaceanvim
       inputs.haskell-tools-nvim.packages.${pkgs.stdenv.hostPlatform.system}.default
       SchemaStore-nvim
+      (mkPlugin lsp_signature-nvim "lsp_signature-nvim.lua")
       (mkPlugin lspsaga-nvim "lspsaga-nvim.lua")
       (mkPlugin nvim-lightbulb "nvim-lightbulb.lua")
       (mkPlugin snacks-nvim "snacks-nvim.lua")
@@ -139,7 +140,6 @@ in {
       cmp-dotenv
       cmp-git
       cmp-nvim-lsp
-      cmp-nvim-lsp-signature-help
       cmp-tmux
       cmp_luasnip
       luasnip
