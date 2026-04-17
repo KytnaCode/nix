@@ -20,6 +20,7 @@
     # Productivity
     microsoft-edge
     brave
+    tor-browser
     obsidian
     zotero
     github-copilot-cli
