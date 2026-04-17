@@ -18,7 +18,6 @@
     manuskript
 
     # Productivity
-    firefox
     microsoft-edge
     obsidian
     zotero
