@@ -25,32 +25,24 @@
       enable = true;
 
       plugins = [
-        "alias-finder"
         "aliases"
         "bun"
         "cabal"
-        "colored-man-pages"
-        "command-not-found"
         "common-aliases"
         "direnv"
         "docker"
         "docker-compose"
-        "dotenv"
         "fancy-ctrl-z"
         "fzf"
         "gh"
         "git"
-        "github"
         "gitignore"
         "golang"
         "gpg-agent"
         "kitty"
         "lol"
-        "ngrok"
         "nmap"
         "node"
-        "npm"
-        "pip"
         "podman"
         "python"
         "qrcode"
@@ -61,8 +53,6 @@
         "stack"
         "systemd"
         "tmux"
-        "vagrant"
-        "zoxide"
       ];
     };
   };
