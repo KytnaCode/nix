@@ -29,6 +29,7 @@
         "bun"
         "cabal"
         "common-aliases"
+        "copybuffer"
         "direnv"
         "docker"
         "docker-compose"
