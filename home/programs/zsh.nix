@@ -33,6 +33,7 @@
         "direnv"
         "docker"
         "docker-compose"
+        "emoji"
         "fancy-ctrl-z"
         "fzf"
         "gh"
