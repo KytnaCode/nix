@@ -19,6 +19,7 @@
 
     # Productivity
     microsoft-edge
+    brave
     obsidian
     zotero
     github-copilot-cli
