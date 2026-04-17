@@ -21,6 +21,26 @@
     };
     syntaxHighlighting.enable = true;
 
+    history = {
+      append = true;
+      ignorePatterns = [
+        "rm"
+        "pkill *"
+        "*"
+        "ssh"
+        "passwd"
+        "exit"
+        "logout"
+        "reboot"
+        "poweroff"
+        "shutdown"
+        "aria2c"
+      ];
+      save = 1000;
+      size = 2000;
+      share = true;
+    };
+
     oh-my-zsh = {
       enable = true;
 
