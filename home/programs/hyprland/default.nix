@@ -20,7 +20,7 @@
     settings = {
       "$mod" = "SUPER";
       "$term" = "kitty";
-      "$browser" = "microsoft-edge";
+      "$browser" = "brave";
       "$launcher" = "wofi";
 
       monitor = [
