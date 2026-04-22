@@ -43,6 +43,7 @@ in {
         typescript-language-server
         vscode-langservers-extracted
         yaml-language-server
+        harper
 
         # Debugging
         gdb

@@ -8,6 +8,7 @@ local servers = {
   "cssls",
   "docker_language_server",
   "gopls",
+  "harper_ls",
   "html",
   "jsonls",
   "lua_ls",
@@ -26,6 +27,18 @@ local config = {
   },
   ["qmlls"] = {
     cmd = { "qmlls", "-E" },
+  },
+  ["harper_ls"] = {
+    settings = {
+      ["harper-ls"] = {
+        linters = {
+          ViciousCircleOrCycle = true,
+          BoringWords = true,
+          ViciousCycle = true,
+          SpelledNumbers = true,
+        },
+      },
+    },
   },
   ["jsonls"] = {
     settings = {
