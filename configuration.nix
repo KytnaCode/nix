@@ -41,7 +41,7 @@
   hardware = {
     graphics.enable = true;
 
-    # Use propetiary drivers.
+    # Use proprietary drivers.
     nvidia.open = false;
 
     bluetooth.enable = true;
@@ -76,7 +76,7 @@
   };
 
   services = {
-    # Connfigure Audio.
+    # Configure Audio.
     pipewire = {
       enable = true;
       alsa.enable = true;
@@ -86,7 +86,7 @@
 
     nfs.server.enable = true;
 
-    # NVidia Propetiary drivers.
+    # Nvidia Proprietary drivers.
     xserver.videoDrivers = ["nvidia"];
     xserver.digimend.enable = true;
   };
