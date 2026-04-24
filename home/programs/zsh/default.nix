@@ -21,6 +21,10 @@
     };
     syntaxHighlighting.enable = true;
 
+    initContent = ''
+      fpath=(~/.config/zsh/completions $fpath)
+    '';
+
     history = {
       append = true;
       ignorePatterns = [
@@ -78,4 +82,6 @@
       ];
     };
   };
+
+  home.file.".config/zsh/completions".source = ./completions;
 }
