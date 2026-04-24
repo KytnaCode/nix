@@ -6,6 +6,7 @@
       ".nvim.lua"
       "Makefile.local"
       "Session.vim"
+      ".harper-dictionary.txt"
     ];
 
     settings = {
