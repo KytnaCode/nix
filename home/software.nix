@@ -57,7 +57,6 @@
   programs = {
     discord.enable = true;
     distrobox.enable = true;
-    gh.enable = true;
     jq.enable = true;
     jqp.enable = true;
     nix-index.enable = true;
