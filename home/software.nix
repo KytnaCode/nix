@@ -51,6 +51,7 @@
     # System
     pwvucontrol
     wl-clipboard
+    btop
   ];
 
   # To small to have a separated file.
