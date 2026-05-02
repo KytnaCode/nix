@@ -6,18 +6,15 @@
   inputs,
   lib,
   user,
+  myutils,
   ...
 }: {
-  imports = [
-    # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-
-    # Config modules:
-    ./modules/input.nix
-    ./modules/networking.nix
-    ./modules/software.nix
-    ./modules/boot.nix
-  ];
+  imports =
+    [
+      # Include the results of the hardware scan.
+      ./hardware-configuration.nix
+    ]
+    ++ import ./modules {inherit myutils;};
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
