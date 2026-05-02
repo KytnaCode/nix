@@ -16,6 +16,7 @@
     ./modules/input.nix
     ./modules/networking.nix
     ./modules/software.nix
+    ./modules/boot.nix
   ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -29,10 +30,6 @@
     ++ import ./overlays {inherit lib;};
 
   nixpkgs.config.allowUnfree = true;
-
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   # Set your time zone.
   time.timeZone = "America/Mazatlan";
