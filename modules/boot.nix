@@ -2,9 +2,22 @@
   boot = {
     # Boot loader.
     loader = {
-      # Use the systemd-boot EFI boot loader.
-      systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
+
+      limine = {
+        enable = true;
+
+        biosSupport = true;
+        efiSupport = true;
+
+        # TODO: Enable secure boot when it's appropiate supported.
+        # secureBoot = {
+        #   enable = true;
+        #   autoGenerateKeys = true;
+        #
+        #   autoEnrollKeys.enable = true;
+        # };
+      };
     };
 
     # Disable kexec to avoid loading untrusted kernels.
