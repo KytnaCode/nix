@@ -75,6 +75,7 @@
         "stack"
         "systemd"
         "tmux"
+        "z"
       ];
     };
   };
