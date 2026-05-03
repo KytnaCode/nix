@@ -1,9 +1,6 @@
 {pkgs, ...}: {
   virtualisation = {
-    docker.rootless = {
-      enable = true;
-      setSocketVariable = true;
-    };
+    podman.enable = true;
 
     virtualbox.host.enable = true;
 
