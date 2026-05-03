@@ -24,6 +24,9 @@ in {
 
     defaultEditor = true;
 
+    withRuby = true;
+    withPython3 = true;
+
     extraPackages =
       [
         inputs.nil.packages.${system}.default
