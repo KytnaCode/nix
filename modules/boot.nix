@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   boot = {
     # Boot loader.
     loader = {
@@ -22,6 +22,12 @@
 
     # Disable kexec to avoid loading untrusted kernels.
     kexec.enable = false;
+
+    plymouth = {
+      enable = true;
+
+      font = "${pkgs.raleway}/share/fonts/truetype/Raleway-Regular.ttf";
+    };
 
     kernel.sysctl = {
       # Restrict kernel pointers.
