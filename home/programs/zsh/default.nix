@@ -79,6 +79,4 @@
       ];
     };
   };
-
-  home.file.".config/zsh/completions".source = ./completions;
 }
