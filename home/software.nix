@@ -63,4 +63,6 @@
     nix-index.enable = true;
     numbat.enable = true;
   };
+
+  services.ssh-agent.enable = true;
 }
