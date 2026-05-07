@@ -5,26 +5,22 @@
   ...
 }:
 with lib; let
-  module = "custom.nvidia";
-  cfg = config.${module};
+  cfg = config.custom.nvidia;
 in {
-  options = {
-    ${module} = {
-      enable = mkEnableOption "install nvidia drivers";
-      proprietary = myutils.mkDefaultEnableOption "use propietary drivers";
-    };
+  options.custom.nvidia = {
+    enable = mkEnableOption "install nvidia drivers";
+    proprietary = myutils.mkDefaultEnableOption "use propietary drivers";
   };
 
   config = mkIf cfg.enable {
     hardware.nvidia = {
-      open = !cfg.propietary;
+      open = !cfg.proprietary;
 
-      nvidia-settings = cfg.propietary;
+      nvidiaSettings = cfg.proprietary;
 
       modesetting.enable = true;
     };
 
-    # Nvidia Proprietary drivers.
-    xserver.videoDrivers = mkIf cfg.propietary ["nvidia"];
+    services.xserver.videoDrivers = mkIf cfg.proprietary ["nvidia"];
   };
 }

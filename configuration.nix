@@ -19,8 +19,16 @@
   # Set your time zone.
   time.timeZone = "America/Mazatlan";
 
-  # Enable Nvidia drivers.
-  custom.nvidia.enable = true;
+  custom = {
+    # Enable Nvidia drivers.
+    nvidia.enable = true;
+
+    # Users
+    users.main = {
+      enable = true;
+      name = user;
+    };
+  };
 
   # Hardware config.
   hardware = {
@@ -48,12 +56,6 @@
   };
 
   security.pki.certificateFiles = [./ca.crt];
-
-  # Users
-  users.default.main = {
-    enable = true;
-    name = user;
-  };
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
