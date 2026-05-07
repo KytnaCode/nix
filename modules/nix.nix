@@ -10,11 +10,11 @@ with lib; let
   cfg = config.${module};
 in {
   options.${module} = {
-    withFlakes = mkDefaultEnabledOption;
+    withFlakes = myutils.mkDefaultEnableOption;
 
-    withDefaultOverlays = mkDefaultEnabledOption;
+    withDefaultOverlays = myutils.mkDefaultEnableOption;
 
-    withUnfreePackages = mkDefaultEnabledOption;
+    withUnfreePackages = myutils.mkDefaultEnableOption;
   };
 
   config = {
