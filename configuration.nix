@@ -28,6 +28,13 @@
       enable = true;
       name = user;
     };
+
+    # Desktop config
+    desktop = {
+      environment.hyprland.enable = true;
+
+      display.sddm.enable = true;
+    };
   };
 
   # Hardware config.
