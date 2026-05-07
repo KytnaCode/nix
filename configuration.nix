@@ -69,14 +69,10 @@
 
   security.pki.certificateFiles = [./ca.crt];
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.${user} = {
-    isNormalUser = true;
-    extraGroups = [
-      "wheel" # Enable ‘sudo’ for the user.
-      "libvirtd"
-    ];
-    shell = pkgs.zsh;
+  # Users
+  users.default.main = {
+    enable = true;
+    name = "alex";
   };
 
   # This option defines the first version of NixOS you have installed on this particular machine,
