@@ -10,11 +10,11 @@ with lib; let
   cfg = config.${module};
 in {
   options.${module} = {
-    withFlakes = myutils.mkDefaultEnableOption;
+    withFlakes = myutils.mkDefaultEnableOption "enable flakes";
 
-    withDefaultOverlays = myutils.mkDefaultEnableOption;
+    withDefaultOverlays = myutils.mkDefaultEnableOption "use predefined overlays";
 
-    withUnfreePackages = myutils.mkDefaultEnableOption;
+    withUnfreePackages = myutils.mkDefaultEnableOption "allow unfree packages";
   };
 
   config = {
@@ -25,7 +25,7 @@ in {
       ([
           inputs.nixneovimplugins.overlays.default
         ]
-        ++ import ./overlays {inherit lib;});
+        ++ import ../overlays {inherit lib;});
 
     nixpkgs.config.allowUnfree = cfg.withUnfreePackages;
   };
