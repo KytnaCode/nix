@@ -32,6 +32,7 @@
     qalculate-gtk
     unzip
     glow
+    virt-manager
 
     # Games
     prismlauncher
