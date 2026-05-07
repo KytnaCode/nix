@@ -54,8 +54,6 @@
       pulse.enable = true;
       jack.enable = true;
     };
-
-    nfs.server.enable = true;
   };
 
   security.pki.certificateFiles = [./ca.crt];
