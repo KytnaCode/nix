@@ -37,5 +37,8 @@
 
   environment.systemPackages = with pkgs; [
     qt6.qtbase
+    hunspell
+    hunspellDicts.es_MX
+    hunspellDicts.en_US
   ];
 }
