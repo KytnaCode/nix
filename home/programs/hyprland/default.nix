@@ -108,6 +108,8 @@
         "$mod, KP_Right, exec, hyprsunsent gamma +10"
         "$mod, KP_Begin, exec, hyprsunsent identity"
 
+        "$mod SHIFT, x, exec, hyprctl kill"
+
         "$mod, h, movefocus, l"
         "$mod, j, movefocus, d"
         "$mod, k, movefocus, u"
