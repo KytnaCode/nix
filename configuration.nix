@@ -3,8 +3,6 @@
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 {
   pkgs,
-  inputs,
-  lib,
   user,
   myutils,
   system,
@@ -17,17 +15,7 @@
     ]
     ++ import ./modules {inherit myutils system;};
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-
   catppuccin.flavor = "latte";
-
-  nixpkgs.overlays =
-    [
-      inputs.nixneovimplugins.overlays.default
-    ]
-    ++ import ./overlays {inherit lib;};
-
-  nixpkgs.config.allowUnfree = true;
 
   # Set your time zone.
   time.timeZone = "America/Mazatlan";
