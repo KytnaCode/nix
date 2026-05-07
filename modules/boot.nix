@@ -10,7 +10,7 @@
         biosSupport = true;
         efiSupport = true;
 
-        # TODO: Enable secure boot when it's appropiate supported.
+        # TODO: Enable secure boot when it's appropriate supported.
         # secureBoot = {
         #   enable = true;
         #   autoGenerateKeys = true;
