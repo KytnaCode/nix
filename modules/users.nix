@@ -5,18 +5,18 @@
   ...
 }:
 with lib; {
-  options.users.predefinided = {
+  options.custom.users = {
     main = {
       enable = mkEnableOption "enable main user";
       name = mkOption {
-        type = types.string;
+        type = types.str;
         example = "alex";
       };
     };
   };
 
   config = let
-    cfg = config.users.predefinided;
+    cfg = config.custom.users;
   in {
     users.users.${cfg.main.name} = mkIf cfg.main.enable {
       isNormalUser = true;
