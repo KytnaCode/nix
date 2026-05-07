@@ -73,7 +73,7 @@
   # Users
   users.default.main = {
     enable = true;
-    name = "alex";
+    name = user;
   };
 
   # This option defines the first version of NixOS you have installed on this particular machine,
