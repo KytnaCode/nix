@@ -7,6 +7,7 @@
   lib,
   user,
   myutils,
+  system,
   ...
 }: {
   imports =
@@ -14,7 +15,7 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ]
-    ++ import ./modules {inherit myutils;};
+    ++ import ./modules {inherit myutils system;};
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 

@@ -1,18 +1,6 @@
-{
-  inputs,
-  system,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   programs = {
     zsh.enable = true;
-
-    hyprland = {
-      enable = true;
-      withUWSM = true;
-      package = inputs.hyprland.packages.${system}.hyprland;
-      portalPackage = inputs.hyprland.packages.${system}.xdg-desktop-portal-hyprland;
-    };
 
     localsend = {
       enable = true;
@@ -23,13 +11,6 @@
   };
 
   services = {
-    desktopManager.plasma6.enable = true;
-
-    displayManager.sddm = {
-      enable = true;
-      wayland.enable = true;
-    };
-
     flatpak.enable = true;
 
     gnome.gnome-keyring.enable = true;
