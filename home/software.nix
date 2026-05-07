@@ -24,6 +24,7 @@
     obsidian
     zotero
     github-copilot-cli
+    libreoffice-qt
 
     # Utility
     flatpak
