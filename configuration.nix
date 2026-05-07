@@ -42,8 +42,6 @@
     graphics.enable = true;
 
     bluetooth.enable = true;
-
-    opentabletdriver.enable = true;
   };
 
   environment.pathsToLink = ["/share/zsh"];
@@ -58,8 +56,6 @@
     };
 
     nfs.server.enable = true;
-
-    xserver.digimend.enable = true;
   };
 
   security.pki.certificateFiles = [./ca.crt];
