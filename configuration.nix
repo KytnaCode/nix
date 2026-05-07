@@ -19,12 +19,12 @@
   # Set your time zone.
   time.timeZone = "America/Mazatlan";
 
+  # Enable Nvidia drivers.
+  custom.nvidia.enable = true;
+
   # Hardware config.
   hardware = {
     graphics.enable = true;
-
-    # Use proprietary drivers.
-    nvidia.open = false;
 
     bluetooth.enable = true;
 
@@ -44,8 +44,6 @@
 
     nfs.server.enable = true;
 
-    # Nvidia Proprietary drivers.
-    xserver.videoDrivers = ["nvidia"];
     xserver.digimend.enable = true;
   };
 
