@@ -2,16 +2,12 @@
   config,
   lib,
   inputs,
+  myutils,
   ...
 }:
 with lib; let
   module = "nix-config";
   cfg = config.${module};
-
-  mkDefaultEnabledOption = mkOption {
-    type = types.bool;
-    default = true;
-  };
 in {
   options.${module} = {
     withFlakes = mkDefaultEnabledOption;

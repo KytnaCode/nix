@@ -2,7 +2,6 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 {
-  pkgs,
   user,
   myutils,
   system,
@@ -33,12 +32,6 @@
   };
 
   environment.pathsToLink = ["/share/zsh"];
-
-  environment.systemPackages = with pkgs; [
-    hunspell
-    hunspellDicts.es_MX
-    hunspellDicts.en_US
-  ];
 
   services = {
     # Configure Audio.

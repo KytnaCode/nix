@@ -9,4 +9,11 @@ with builtins; {
     read = path: exclude: filterAttrs (name: _: shouldExclude name exclude) (readDir path);
   in
     dir: exclude: mapAttrsToList (name: _: dir + "/${name}") (read dir exclude);
+
+  mkDefaultEnableOption = desc:
+    mkOption {
+      type = types.bool;
+      default = true;
+      description = desc;
+    };
 }
