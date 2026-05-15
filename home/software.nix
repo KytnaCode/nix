@@ -41,6 +41,7 @@
     hyprpicker
 
     # Fonts
+    corefonts
     merriweather
     montserrat
     mplus-outline-fonts.githubRelease
